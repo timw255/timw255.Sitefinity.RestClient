@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{802F5321-D7BF-45D7-95A8-75CB108BF369}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>timw255.Sitefinity.RestClient</RootNamespace>
+    <AssemblyName>timw255.Sitefinity.RestClient</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\packages\RestSharp.105.0.1\lib\net4\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.OpenAccess">
+      <HintPath>..\packages\Telerik.DataAccess.Core.2015.1.225.1\lib\net40\Telerik.OpenAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.35.Extensions">
+      <HintPath>..\packages\Telerik.DataAccess.Core.2015.1.225.1\lib\net40\Telerik.OpenAccess.35.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.40.Extensions">
+      <HintPath>..\packages\Telerik.DataAccess.Core.2015.1.225.1\lib\net40\Telerik.OpenAccess.40.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.OpenAccess.Runtime">
+      <HintPath>..\packages\Telerik.DataAccess.Core.2015.1.225.1\lib\net40\Telerik.OpenAccess.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity">
+      <HintPath>..\packages\Telerik.Sitefinity.Core.8.0.5700.0\lib\net40\Telerik.Sitefinity.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.ContentModules">
+      <HintPath>..\packages\Telerik.Sitefinity.Content.8.0.5700.0\lib\net40\Telerik.Sitefinity.ContentModules.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Ecommerce">
+      <HintPath>..\packages\Telerik.Sitefinity.Content.8.0.5700.0\lib\net40\Telerik.Sitefinity.Ecommerce.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Forums">
+      <HintPath>..\packages\Telerik.Sitefinity.Content.8.0.5700.0\lib\net40\Telerik.Sitefinity.Forums.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Model">
+      <HintPath>..\packages\Telerik.Sitefinity.Core.8.0.5700.0\lib\net40\Telerik.Sitefinity.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Personalization">
+      <HintPath>..\packages\Telerik.Sitefinity.Core.8.0.5700.0\lib\net40\Telerik.Sitefinity.Personalization.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.RecurrentRules">
+      <HintPath>..\packages\Telerik.Sitefinity.Content.8.0.5700.0\lib\net40\Telerik.Sitefinity.RecurrentRules.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Resources">
+      <HintPath>..\packages\Telerik.Sitefinity.Core.8.0.5700.0\lib\net40\Telerik.Sitefinity.Resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Search">
+      <HintPath>..\packages\Telerik.Sitefinity.Core.8.0.5700.0\lib\net40\Telerik.Sitefinity.Search.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Services.Comments">
+      <HintPath>..\packages\Telerik.Sitefinity.Core.8.0.5700.0\lib\net40\Telerik.Sitefinity.Services.Comments.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Services.Documents">
+      <HintPath>..\packages\Telerik.Sitefinity.Core.8.0.5700.0\lib\net40\Telerik.Sitefinity.Services.Documents.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Services.Events">
+      <HintPath>..\packages\Telerik.Sitefinity.Core.8.0.5700.0\lib\net40\Telerik.Sitefinity.Services.Events.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Services.Notifications">
+      <HintPath>..\packages\Telerik.Sitefinity.Core.8.0.5700.0\lib\net40\Telerik.Sitefinity.Services.Notifications.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Services.Statistics">
+      <HintPath>..\packages\Telerik.Sitefinity.Core.8.0.5700.0\lib\net40\Telerik.Sitefinity.Services.Statistics.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.SiteSync">
+      <HintPath>..\packages\Telerik.Sitefinity.SiteSync.8.0.5700.0\lib\net40\Telerik.Sitefinity.SiteSync.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Thunder.CodeSync">
+      <HintPath>..\packages\Telerik.Sitefinity.Thunder.8.0.5700.0\lib\net40\Telerik.Sitefinity.Thunder.CodeSync.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Thunder.Contracts">
+      <HintPath>..\packages\Telerik.Sitefinity.Thunder.8.0.5700.0\lib\net40\Telerik.Sitefinity.Thunder.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Thunder.Module">
+      <HintPath>..\packages\Telerik.Sitefinity.Thunder.8.0.5700.0\lib\net40\Telerik.Sitefinity.Thunder.Module.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Thunder.Zip">
+      <HintPath>..\packages\Telerik.Sitefinity.Thunder.8.0.5700.0\lib\net40\Telerik.Sitefinity.Thunder.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Sitefinity.Utilities">
+      <HintPath>..\packages\Telerik.Sitefinity.Core.8.0.5700.0\lib\net40\Telerik.Sitefinity.Utilities.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\InventoryReportViewModel.cs" />
+    <Compile Include="Model\OrderSummaryChartViewModel.cs" />
+    <Compile Include="Model\OrderSummaryHighlightViewModel.cs" />
+    <Compile Include="Model\OrderSummaryReportGridViewModel.cs" />
+    <Compile Include="Model\OrderSummaryReportViewModel.cs" />
+    <Compile Include="Model\TopSellingReportViewModel.cs" />
+    <Compile Include="ServiceWrappers\Common\ContentServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Content\CommentsGenericServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Content\ContentBlockPageServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Ecommerce\Catalog\ProductAttributeServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Ecommerce\Catalog\ProductAttributeValueServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Ecommerce\Catalog\ProductServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Ecommerce\Catalog\ProductTypeServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Ecommerce\Catalog\ProductVariationDetailServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Ecommerce\Catalog\ProductVariationServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Ecommerce\Catalog\ProductVariationsModuleServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Ecommerce\CurrencyDataServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Ecommerce\Order\CartAddressServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Ecommerce\Order\CartDetailServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Ecommerce\Order\CartDiscountServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Ecommerce\Order\CartServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Ecommerce\Order\CustomerAddressServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Ecommerce\Order\CustomerServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Ecommerce\Order\DiscountServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Ecommerce\Order\OrderDiscountServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Ecommerce\Order\OrderDownloadServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Ecommerce\Order\OrderServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Ecommerce\Order\PaymentMethodServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Ecommerce\Order\TaxClassServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Ecommerce\Order\TaxServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Ecommerce\Reports\OrdersReportsServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Ecommerce\Reports\ProductsReportsServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Ecommerce\Shipping\ShippingMethodServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Localization\AllCulturesResourceServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Localization\DualLocalizationResourcesServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Localization\LocalizationClassesServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Localization\LocalizationResourcesServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Thunder\ThunderServiceWrapper.cs" />
+    <Compile Include="SitefinityRestClient.cs" />
+    <Compile Include="Exceptions\InvalidRequestException.cs" />
+    <Compile Include="Exceptions\SitefinityException.cs" />
+    <Compile Include="Model\ContentTypeSimpleContext.cs" />
+    <Compile Include="Model\ContentTypeTreeItemContext.cs" />
+    <Compile Include="Model\DynamicItemContext.cs" />
+    <Compile Include="Model\GridColumnWrapper.cs" />
+    <Compile Include="Model\ModuleNameContext.cs" />
+    <Compile Include="Model\ProviderMigrationRequest.cs" />
+    <Compile Include="Model\SectionFieldWrapper.cs" />
+    <Compile Include="Model\SiteSyncProjectData.cs" />
+    <Compile Include="Model\SiteSyncValidationRequest.cs" />
+    <Compile Include="Model\SyncSettings.cs" />
+    <Compile Include="Model\SyncSummary.cs" />
+    <Compile Include="Model\SyncSummaryServer.cs" />
+    <Compile Include="Model\TargetServerInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceWrappers\BlobStorage\BlobStorageServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Catalog\ProductAttributeServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Catalog\ProductAttributeValueServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Common\CommentsServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Common\GenericItemsServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Common\QueryBuilderServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Configuration\ConfigPoliciesServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Configuration\ConfigPolicyHandlersServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Configuration\ConfigSectionItemsServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Configuration\LocalizationCulturesServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Content\AlbumServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Content\BlogPostServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Content\BlogServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Content\ContentItemServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Content\ContentServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Content\DocumentLibraryServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Content\DocumentServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Content\EventServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Content\ImageServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Content\NewsItemServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Content\VideoLibraryServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Content\VideoServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\ControlTemplates\ControlTemplateServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\DynamicModules\BackendFormServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\DynamicModules\BackendGridStructureServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\DynamicModules\ContentTypeServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\DynamicModules\DataServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Forms\FormsServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Lists\ListItemServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Lists\ListServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Lists\ListsModuleServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\MetaData\MetaDataServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\MetaData\ModuleEditorServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Newsletters\ABCampaignServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Newsletters\CampaignServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Newsletters\DynamicListServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Newsletters\IssueReportServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Newsletters\MailingListServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Newsletters\MessageTemplateServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Newsletters\SettingsServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Newsletters\SubscriberServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Newsletters\SystemStatsServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Pages\ControlPropertyServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Pages\PagesServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Pages\PageTemplatesServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Pages\ZoneEditorServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Publishing\PublishingServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\ResponsiveDesign\MediaQueryServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Security\MembershipSettingsServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Security\PermissionsServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Security\RolesServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Security\UsersServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\ServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\SitefinityProjectServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\SiteSync\SiteSyncServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Taxonomies\FlatTaxonServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Taxonomies\HierarchicalTaxonServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Taxonomies\MarkedItemsServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Taxonomies\TaxonomyServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\UserProfiles\UserProfileTypesServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Versioning\HistoryServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Workflow\WorkflowDefinitionServiceWrapper.cs" />
+    <Compile Include="ServiceWrappers\Workflow\WorkflowServiceWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
