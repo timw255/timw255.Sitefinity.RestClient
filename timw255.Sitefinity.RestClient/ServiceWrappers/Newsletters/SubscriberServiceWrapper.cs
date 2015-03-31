@@ -7,8 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Telerik.Sitefinity.Modules.Newsletters.Services.ViewModel;
 using Telerik.Sitefinity.Web.Services;
+using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers;
 
-namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers.Newsletters
+namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
 {
     public class SubscriberServiceWrapper : ServiceWrapper
     {

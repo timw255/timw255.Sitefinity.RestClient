@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 using Telerik.Sitefinity.Modules.Forms.Web.Services.Model;
 using Telerik.Sitefinity.Modules.Pages.Web.Services.Model;
 using Telerik.Sitefinity.Web.UI;
+using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers;
 
-namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers.Pages
+namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 {
     public class ZoneEditorServiceWrapper : ServiceWrapper
     {

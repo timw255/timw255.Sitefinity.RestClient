@@ -7,8 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Telerik.Sitefinity.Localization.Configuration;
 using Telerik.Sitefinity.Web.Services;
+using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers;
 
-namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers.Configuration
+namespace timw255.Sitefinity.RestClient.ServiceWrappers.Configuration
 {
     public class LocalizationCulturesServiceWrapper : ServiceWrapper
     {

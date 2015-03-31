@@ -7,8 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Telerik.Sitefinity.Web.Services;
 using Telerik.Sitefinity.Workflow.Services.Data;
+using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers;
 
-namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers.Workflow
+namespace timw255.Sitefinity.RestClient.ServiceWrappers.Workflow
 {
     public class WorkflowDefinitionServiceWrapper : ServiceWrapper
     {

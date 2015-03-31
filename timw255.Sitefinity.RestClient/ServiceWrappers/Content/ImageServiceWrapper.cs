@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Telerik.Sitefinity.Libraries.Model;
 using Telerik.Sitefinity.Modules.Libraries.Images;
 
-namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers.Content
+namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
 {
     public class ImageServiceWrapper : ContentServiceWrapper<Image, AlbumItemViewModel>
     {

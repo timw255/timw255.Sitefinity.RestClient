@@ -7,8 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Telerik.Sitefinity.Model;
 using Telerik.Sitefinity.Web.Services;
+using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers;
 
-namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers.Common
+namespace timw255.Sitefinity.RestClient.ServiceWrappers.Common
 {
     public class GenericItemsServiceWrapper : ServiceWrapper
     {

@@ -10,8 +10,9 @@ using System.Threading.Tasks;
 using Telerik.Sitefinity.Security.Web.Services;
 using Telerik.Sitefinity.Web.Services;
 using Telerik.Sitefinity.Web.UI.Modules.Selectors;
+using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers;
 
-namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers.Security
+namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
 {
     public class PermissionsServiceWrapper : ServiceWrapper
     {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Telerik.Sitefinity.Modules.News.Web.Services;
 using Telerik.Sitefinity.News.Model;
 
-namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers.Content
+namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
 {
     public class NewsItemServiceWrapper : ContentServiceWrapper<NewsItem, NewsItemViewModel>
     {

@@ -9,8 +9,9 @@ using System.Threading.Tasks;
 using Telerik.Sitefinity.Security;
 using Telerik.Sitefinity.Security.Web.Services;
 using Telerik.Sitefinity.Web.Services;
+using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers;
 
-namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers.Security
+namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
 {
     public class UsersServiceWrapper : ServiceWrapper
     {

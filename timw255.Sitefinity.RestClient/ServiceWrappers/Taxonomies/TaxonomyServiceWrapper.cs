@@ -7,8 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Telerik.Sitefinity.Taxonomies.Web.Services;
 using Telerik.Sitefinity.Web.Services;
+using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers;
 
-namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers.Taxonomies
+namespace timw255.Sitefinity.RestClient.ServiceWrappers.Taxonomies
 {
     public class TaxonomyServiceWrapper : ServiceWrapper
     {
@@ -18,8 +19,7 @@ namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers.Taxonom
             this.SF = sf;
         }
 
-        //7.3 - [WebInvoke(Method = "POST", UriTemplate = "batch/?providerName={providerName}&itemType={itemType}&language={deletedLanguage}")]
-        //8.0 - [WebInvoke(Method="POST", UriTemplate="batch/?providerName={providerName}&itemType={itemType}&language={deletedLanguage}&deleteTaxaOnly={deleteTaxaOnly}", ResponseFormat=WebMessageFormat.Json)]
+        //[WebInvoke(Method="POST", UriTemplate="batch/?providerName={providerName}&itemType={itemType}&language={deletedLanguage}&deleteTaxaOnly={deleteTaxaOnly}", ResponseFormat=WebMessageFormat.Json)]
         public bool BatchDeleteTaxonomy(Guid[] Ids, string itemType, string providerName, string deletedLanguage, bool deleteTaxaOnly)
         {
             var request = new RestRequest(this.ServiceUrl + "batch/?providerName={providerName}&itemType={itemType}&language={deletedLanguage}&deleteTaxaOnly={deleteTaxaOnly}", Method.POST);

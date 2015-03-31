@@ -7,8 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Telerik.Sitefinity.Modules.ResponsiveDesign.Web.Services;
 using Telerik.Sitefinity.Web.Services;
+using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers;
 
-namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers.ResponsiveDesign
+namespace timw255.Sitefinity.RestClient.ServiceWrappers.ResponsiveDesign
 {
     public class MediaQueryServiceWrapper : ServiceWrapper
     {

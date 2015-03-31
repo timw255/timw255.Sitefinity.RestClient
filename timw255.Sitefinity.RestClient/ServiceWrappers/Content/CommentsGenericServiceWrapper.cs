@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Telerik.Sitefinity.GenericContent.Model;
 using Telerik.Sitefinity.Modules.GenericContent.Web.Services.Data;
-using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers.Content;
+using timw255.Sitefinity.RestClient.ServiceWrappers.Content;
 
 namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
 {

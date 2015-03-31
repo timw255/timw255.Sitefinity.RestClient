@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 using Telerik.Sitefinity.DynamicModules.Model;
 using Telerik.Sitefinity.Web.Services;
 using timw255.Sitefinity.RestClient.Model;
+using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers;
 
-namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers.DynamicModules
+namespace timw255.Sitefinity.RestClient.ServiceWrappers.DynamicModules
 {
     public class DataServiceWrapper : ServiceWrapper
     {

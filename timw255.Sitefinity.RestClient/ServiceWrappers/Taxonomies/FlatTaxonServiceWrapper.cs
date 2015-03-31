@@ -7,8 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Telerik.Sitefinity.Taxonomies.Web.Services;
 using Telerik.Sitefinity.Web.Services;
+using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers;
 
-namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers.Taxonomies
+namespace timw255.Sitefinity.RestClient.ServiceWrappers.Taxonomies
 {
     public class FlatTaxonServiceWrapper : ServiceWrapper
     {

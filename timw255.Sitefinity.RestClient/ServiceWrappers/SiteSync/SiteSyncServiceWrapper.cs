@@ -11,8 +11,9 @@ using Telerik.Sitefinity.SiteSync;
 using Telerik.Sitefinity.SiteSync.Web;
 using Telerik.Sitefinity.Web.Services;
 using timw255.Sitefinity.RestClient.Model;
+using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers;
 
-namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers.SiteSync
+namespace timw255.Sitefinity.RestClient.ServiceWrappers.SiteSync
 {
     public class SiteSyncServiceWrapper : ServiceWrapper
     {

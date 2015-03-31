@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Telerik.Sitefinity.Libraries.Model;
 using Telerik.Sitefinity.Modules.Libraries.Documents;
 
-namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers.Content
+namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
 {
     public class DocumentServiceWrapper : ContentServiceWrapper<Document, DocumentLibraryItemViewModel>
     {

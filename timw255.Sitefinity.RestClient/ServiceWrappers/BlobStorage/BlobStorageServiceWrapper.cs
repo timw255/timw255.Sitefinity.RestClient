@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 using Telerik.Sitefinity.Configuration.Basic;
 using Telerik.Sitefinity.Modules.Libraries.Web.Services;
 using Telerik.Sitefinity.Web.Services;
+using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers;
 
-namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers.BlobStorage
+namespace timw255.Sitefinity.RestClient.ServiceWrappers.BlobStorage
 {
     public class BlobStorageServiceWrapper : ServiceWrapper
     {

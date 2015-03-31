@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Telerik.Sitefinity.GenericContent.Model;
 using Telerik.Sitefinity.Modules.GenericContent.Web.Services;
 using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers;
-using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers.Content;
+using timw255.Sitefinity.RestClient.ServiceWrappers.Content;
 
 namespace timw255.Sitefinity.RestClient.ServiceWrappers.Common
 {

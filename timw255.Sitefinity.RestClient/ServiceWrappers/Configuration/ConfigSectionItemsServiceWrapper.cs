@@ -10,8 +10,9 @@ using Telerik.Sitefinity.Configuration.Web;
 using Telerik.Sitefinity.Modules.Newsletters.BasicSettings;
 using Telerik.Sitefinity.SiteSettings.Basic;
 using Telerik.Sitefinity.Web.Services;
+using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers;
 
-namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers.Configuration
+namespace timw255.Sitefinity.RestClient.ServiceWrappers.Configuration
 {
     public class ConfigSectionItemsServiceWrapper : ServiceWrapper
     {

@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 using Telerik.Sitefinity.Modules.Pages.Web.Services;
 using Telerik.Sitefinity.Modules.Pages.Web.Services.Model;
 using Telerik.Sitefinity.Web.Services;
+using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers;
 
-namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers.Pages
+namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 {
     public class ControlPropertyServiceWrapper : ServiceWrapper
     {

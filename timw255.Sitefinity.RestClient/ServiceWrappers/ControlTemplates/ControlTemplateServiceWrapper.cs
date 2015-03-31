@@ -10,8 +10,9 @@ using Telerik.Sitefinity.Modules.ControlTemplates.Web.Services;
 using Telerik.Sitefinity.Multisite.Web.Services.ViewModel;
 using Telerik.Sitefinity.Pages.Model;
 using Telerik.Sitefinity.Web.Services;
+using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers;
 
-namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers.ControlTemplates
+namespace timw255.Sitefinity.RestClient.ServiceWrappers.ControlTemplates
 {
     public class ControlTemplateServiceWrapper : ServiceWrapper
     {

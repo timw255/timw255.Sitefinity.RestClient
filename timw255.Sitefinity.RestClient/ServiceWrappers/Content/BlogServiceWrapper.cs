@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Telerik.Sitefinity.Blogs.Model;
 using Telerik.Sitefinity.Modules.Blogs.Web.Services;
 
-namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers.Content
+namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
 {
     public class BlogServiceWrapper : ContentServiceWrapper<Blog, BlogViewModel>
     {

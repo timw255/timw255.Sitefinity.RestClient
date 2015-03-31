@@ -7,8 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Telerik.Sitefinity.Publishing.Web.Services.Data;
 using Telerik.Sitefinity.Web.Services;
+using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers;
 
-namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers.Publishing
+namespace timw255.Sitefinity.RestClient.ServiceWrappers.Publishing
 {
     public class PublishingServiceWrapper : ServiceWrapper
     {
