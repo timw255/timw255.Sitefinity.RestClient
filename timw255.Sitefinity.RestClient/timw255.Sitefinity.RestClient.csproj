@@ -40,93 +40,368 @@
       <HintPath>..\packages\RestSharp.105.0.1\lib\net4\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Telerik.OpenAccess">
-      <HintPath>..\packages\Telerik.DataAccess.Core.2015.1.225.1\lib\net40\Telerik.OpenAccess.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.OpenAccess.35.Extensions">
-      <HintPath>..\packages\Telerik.DataAccess.Core.2015.1.225.1\lib\net40\Telerik.OpenAccess.35.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.OpenAccess.40.Extensions">
-      <HintPath>..\packages\Telerik.DataAccess.Core.2015.1.225.1\lib\net40\Telerik.OpenAccess.40.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.OpenAccess.Runtime">
-      <HintPath>..\packages\Telerik.DataAccess.Core.2015.1.225.1\lib\net40\Telerik.OpenAccess.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity">
-      <HintPath>..\packages\Telerik.Sitefinity.Core.8.0.5700.0\lib\net40\Telerik.Sitefinity.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.ContentModules">
-      <HintPath>..\packages\Telerik.Sitefinity.Content.8.0.5700.0\lib\net40\Telerik.Sitefinity.ContentModules.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Ecommerce">
-      <HintPath>..\packages\Telerik.Sitefinity.Content.8.0.5700.0\lib\net40\Telerik.Sitefinity.Ecommerce.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Forums">
-      <HintPath>..\packages\Telerik.Sitefinity.Content.8.0.5700.0\lib\net40\Telerik.Sitefinity.Forums.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Model">
-      <HintPath>..\packages\Telerik.Sitefinity.Core.8.0.5700.0\lib\net40\Telerik.Sitefinity.Model.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Personalization">
-      <HintPath>..\packages\Telerik.Sitefinity.Core.8.0.5700.0\lib\net40\Telerik.Sitefinity.Personalization.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.RecurrentRules">
-      <HintPath>..\packages\Telerik.Sitefinity.Content.8.0.5700.0\lib\net40\Telerik.Sitefinity.RecurrentRules.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Resources">
-      <HintPath>..\packages\Telerik.Sitefinity.Core.8.0.5700.0\lib\net40\Telerik.Sitefinity.Resources.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Search">
-      <HintPath>..\packages\Telerik.Sitefinity.Core.8.0.5700.0\lib\net40\Telerik.Sitefinity.Search.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.Comments">
-      <HintPath>..\packages\Telerik.Sitefinity.Core.8.0.5700.0\lib\net40\Telerik.Sitefinity.Services.Comments.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.Documents">
-      <HintPath>..\packages\Telerik.Sitefinity.Core.8.0.5700.0\lib\net40\Telerik.Sitefinity.Services.Documents.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.Events">
-      <HintPath>..\packages\Telerik.Sitefinity.Core.8.0.5700.0\lib\net40\Telerik.Sitefinity.Services.Events.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.Notifications">
-      <HintPath>..\packages\Telerik.Sitefinity.Core.8.0.5700.0\lib\net40\Telerik.Sitefinity.Services.Notifications.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Services.Statistics">
-      <HintPath>..\packages\Telerik.Sitefinity.Core.8.0.5700.0\lib\net40\Telerik.Sitefinity.Services.Statistics.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.SiteSync">
-      <HintPath>..\packages\Telerik.Sitefinity.SiteSync.8.0.5700.0\lib\net40\Telerik.Sitefinity.SiteSync.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Thunder.CodeSync">
-      <HintPath>..\packages\Telerik.Sitefinity.Thunder.8.0.5700.0\lib\net40\Telerik.Sitefinity.Thunder.CodeSync.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Thunder.Contracts">
-      <HintPath>..\packages\Telerik.Sitefinity.Thunder.8.0.5700.0\lib\net40\Telerik.Sitefinity.Thunder.Contracts.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Thunder.Module">
-      <HintPath>..\packages\Telerik.Sitefinity.Thunder.8.0.5700.0\lib\net40\Telerik.Sitefinity.Thunder.Module.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Thunder.Zip">
-      <HintPath>..\packages\Telerik.Sitefinity.Thunder.8.0.5700.0\lib\net40\Telerik.Sitefinity.Thunder.Zip.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Sitefinity.Utilities">
-      <HintPath>..\packages\Telerik.Sitefinity.Core.8.0.5700.0\lib\net40\Telerik.Sitefinity.Utilities.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\ABCampaignGridViewModel.cs" />
+    <Compile Include="Model\ABCampaignViewModel.cs" />
+    <Compile Include="Model\AdditionalCssViewModel.cs" />
+    <Compile Include="Model\AddressType.cs" />
+    <Compile Include="Model\Album.cs" />
+    <Compile Include="Model\AlbumItemViewModel.cs" />
+    <Compile Include="Model\AlbumViewModel.cs" />
+    <Compile Include="Model\ApplyDiscountFor.cs" />
+    <Compile Include="Model\ApprovalTrackingRecord.cs" />
+    <Compile Include="Model\ApprovalTrackingRecordMap.cs" />
+    <Compile Include="Model\AttributeValueNamePair.cs" />
+    <Compile Include="Model\AuthenticationCredentials.cs" />
+    <Compile Include="Model\AuthenticationResult.cs" />
+    <Compile Include="Model\Blog.cs" />
+    <Compile Include="Model\BlogPost.cs" />
+    <Compile Include="Model\BlogPostUrlData.cs" />
+    <Compile Include="Model\BlogPostViewModel.cs" />
+    <Compile Include="Model\BlogUrlData.cs" />
+    <Compile Include="Model\BlogViewModel.cs" />
+    <Compile Include="Model\BounceAction.cs" />
+    <Compile Include="Model\Calendar.cs" />
+    <Compile Include="Model\CalendarUrlData.cs" />
+    <Compile Include="Model\CampaignGridViewModel.cs" />
+    <Compile Include="Model\CampaignState.cs" />
+    <Compile Include="Model\CampaignViewModel.cs" />
+    <Compile Include="Model\CanonicalUrlSettings.cs" />
+    <Compile Include="Model\CartAddress.cs" />
+    <Compile Include="Model\CartDetail.cs" />
+    <Compile Include="Model\CartDetailVariationLink.cs" />
+    <Compile Include="Model\CartDiscount.cs" />
+    <Compile Include="Model\CartOrder.cs" />
+    <Compile Include="Model\CartPayment.cs" />
+    <Compile Include="Model\ChoiceDefinition.cs" />
+    <Compile Include="Model\ClickStatViewModel.cs" />
+    <Compile Include="Model\CollectionContext.cs" />
+    <Compile Include="Model\Comment.cs" />
+    <Compile Include="Model\CommentsSettingsContract.cs" />
+    <Compile Include="Model\CommentStatus.cs" />
+    <Compile Include="Model\CommentsViewModel.cs" />
+    <Compile Include="Model\ComparingValidatorDefinition.cs" />
+    <Compile Include="Model\ComparingValidatorElement.cs" />
+    <Compile Include="Model\Condition.cs" />
+    <Compile Include="Model\ConfigElement.cs" />
+    <Compile Include="Model\ConfigProperty.cs" />
+    <Compile Include="Model\ConfigPropertyCollection.cs" />
+    <Compile Include="Model\ConfigSection.cs" />
+    <Compile Include="Model\ConfigSettingsContractBase.cs" />
+    <Compile Include="Model\ContentBase.cs" />
+    <Compile Include="Model\ContentBlockPageViewModel.cs" />
+    <Compile Include="Model\ContentItem.cs" />
+    <Compile Include="Model\ContentItemContext.cs" />
+    <Compile Include="Model\ContentItemUrlData.cs" />
+    <Compile Include="Model\ContentLifecycleStatus.cs" />
+    <Compile Include="Model\ContentLink.cs" />
+    <Compile Include="Model\ContentLinkChange.cs" />
+    <Compile Include="Model\ContentLinkChangeState.cs" />
+    <Compile Include="Model\ContentTypeContext.cs" />
+    <Compile Include="Model\ContentTypeItemFieldContext.cs" />
+    <Compile Include="Model\ContentUIStatus.cs" />
+    <Compile Include="Model\ContentViewModel.cs" />
+    <Compile Include="Model\ContentViewModelBase.cs" />
+    <Compile Include="Model\ControlPresentation.cs" />
+    <Compile Include="Model\ControlTemplateVersionInfo.cs" />
+    <Compile Include="Model\ControlTemplateViewModel.cs" />
+    <Compile Include="Model\CouponCode.cs" />
+    <Compile Include="Model\Credentials.cs" />
+    <Compile Include="Model\CreditCardType.cs" />
+    <Compile Include="Model\CultureElement.cs" />
+    <Compile Include="Model\CultureSettingViewModel.cs" />
+    <Compile Include="Model\CultureViewModel.cs" />
+    <Compile Include="Model\CurrenciesAllowedSettingsViewModel.cs" />
+    <Compile Include="Model\CurrencyExchangeDataSync.cs" />
+    <Compile Include="Model\CurrencyRounding.cs" />
+    <Compile Include="Model\CurrencyViewModel.cs" />
+    <Compile Include="Model\CurrentPageState.cs" />
+    <Compile Include="Model\Customer.cs" />
+    <Compile Include="Model\CustomerAddress.cs" />
+    <Compile Include="Model\CustomerMoney.cs" />
+    <Compile Include="Model\CustomerProfile.cs" />
+    <Compile Include="Model\CustomerStatistic.cs" />
+    <Compile Include="Model\CustomerSummary.cs" />
+    <Compile Include="Model\CustomizableFieldObject.cs" />
+    <Compile Include="Model\DataItemContext.cs" />
+    <Compile Include="Model\DataItemProperty.cs" />
+    <Compile Include="Model\DataItemPropertyType.cs" />
+    <Compile Include="Model\DataItemPropertyViewModel.cs" />
+    <Compile Include="Model\DataItemStatus.cs" />
+    <Compile Include="Model\DataPropertyDescriptor.cs" />
+    <Compile Include="Model\DataProviderSettingsViewModel.cs" />
+    <Compile Include="Model\DefinitionBase.cs" />
+    <Compile Include="Model\DeleteContentTypeContext.cs" />
+    <Compile Include="Model\DeleteStatus.cs" />
+    <Compile Include="Model\DesignMediaType.cs" />
+    <Compile Include="Model\DeviceOrientation.cs" />
+    <Compile Include="Model\DictionaryObjectViewModel.cs" />
+    <Compile Include="Model\Discount.cs" />
+    <Compile Include="Model\DiscountAmountType.cs" />
+    <Compile Include="Model\DiscountCriteria.cs" />
+    <Compile Include="Model\DiscountType.cs" />
+    <Compile Include="Model\Document.cs" />
+    <Compile Include="Model\DocumentLibrary.cs" />
+    <Compile Include="Model\DocumentLibraryItemViewModel.cs" />
+    <Compile Include="Model\DocumentViewModel.cs" />
+    <Compile Include="Model\DtoDateTime.cs" />
+    <Compile Include="Model\DualResourceEntry.cs" />
+    <Compile Include="Model\DynamicContent.cs" />
+    <Compile Include="Model\DynamicContentUrlData.cs" />
+    <Compile Include="Model\DynamicListInfoViewModel.cs" />
+    <Compile Include="Model\DynamicListSettingsViewModel.cs" />
+    <Compile Include="Model\Event.cs" />
+    <Compile Include="Model\EventUrlData.cs" />
+    <Compile Include="Model\EventViewModel.cs" />
+    <Compile Include="Model\ExchangeRateResponse.cs" />
+    <Compile Include="Model\ExchangeRateResponseViewModel.cs" />
+    <Compile Include="Model\ExchangeRatesDataSyncViewModel.cs" />
+    <Compile Include="Model\ExchangeRateServiceSyncWhen.cs" />
+    <Compile Include="Model\ExchangeRateSuccessType.cs" />
+    <Compile Include="Model\ExpandableControlDefinition.cs" />
+    <Compile Include="Model\FailedToSyncItem.cs" />
+    <Compile Include="Model\FieldType.cs" />
+    <Compile Include="Model\FieldViewModel.cs" />
+    <Compile Include="Model\FolderDetailViewModel.cs" />
+    <Compile Include="Model\FoldersCollectionContext.cs" />
+    <Compile Include="Model\FolderViewModel.cs" />
+    <Compile Include="Model\FormDescriptionViewModel.cs" />
+    <Compile Include="Model\FormDescriptionViewModelContext.cs" />
+    <Compile Include="Model\FormEntry.cs" />
+    <Compile Include="Model\FormLabelPlacement.cs" />
+    <Compile Include="Model\GeneralSettingsModel.cs" />
+    <Compile Include="Model\HierarchicalContentViewModelBase.cs" />
+    <Compile Include="Model\HierarchyLevelState.cs" />
+    <Compile Include="Model\IContent.cs" />
+    <Compile Include="Model\IDataItem.cs" />
+    <Compile Include="Model\IDynamicFieldsContainer.cs" />
+    <Compile Include="Model\Image.cs" />
+    <Compile Include="Model\ImageViewModel.cs" />
     <Compile Include="Model\InventoryReportViewModel.cs" />
+    <Compile Include="Model\IssueGridViewModel.cs" />
+    <Compile Include="Model\IssueReportViewModel.cs" />
+    <Compile Include="Model\IssueSubscriberViewModel.cs" />
+    <Compile Include="Model\IssueViewModel.cs" />
+    <Compile Include="Model\ItemContext.cs" />
+    <Compile Include="Model\ItemState.cs" />
+    <Compile Include="Model\IWcfTaxon.cs" />
+    <Compile Include="Model\JsonDictionary.cs" />
+    <Compile Include="Model\LanguageData.cs" />
+    <Compile Include="Model\LayoutControlDataPermissions.cs" />
+    <Compile Include="Model\LayoutTransformationViewModel.cs" />
+    <Compile Include="Model\Library.cs" />
+    <Compile Include="Model\LibraryTasks.cs" />
+    <Compile Include="Model\LibraryViewModel.cs" />
+    <Compile Include="Model\LifecycleInfo.cs" />
+    <Compile Include="Model\LifecycleState.cs" />
+    <Compile Include="Model\List.cs" />
+    <Compile Include="Model\ListItem.cs" />
+    <Compile Include="Model\ListItemUrlData.cs" />
+    <Compile Include="Model\ListItemViewModel.cs" />
+    <Compile Include="Model\ListUrlData.cs" />
+    <Compile Include="Model\ListViewModel.cs" />
+    <Compile Include="Model\LocalizationSettingsModel.cs" />
+    <Compile Include="Model\LocalizationStrategy.cs" />
+    <Compile Include="Model\Lstring.cs" />
+    <Compile Include="Model\LstringSingleViewModel.cs" />
+    <Compile Include="Model\MailingListViewModel.cs" />
+    <Compile Include="Model\MappingSettingsViewModel.cs" />
+    <Compile Include="Model\MappingViewModel.cs" />
+    <Compile Include="Model\MasterPageFile.cs" />
+    <Compile Include="Model\MediaContent.cs" />
+    <Compile Include="Model\MediaContentViewModel.cs" />
+    <Compile Include="Model\MediaQueryLinkViewModel.cs" />
+    <Compile Include="Model\MediaQueryRuleViewModel.cs" />
+    <Compile Include="Model\MediaQueryViewModel.cs" />
+    <Compile Include="Model\MediaUrlData.cs" />
+    <Compile Include="Model\MembershipProviderSetting.cs" />
+    <Compile Include="Model\MembershipProvidersUsage.cs" />
+    <Compile Include="Model\MergeTagViewModel.cs" />
+    <Compile Include="Model\MessageBodyType.cs" />
+    <Compile Include="Model\MessageBodyViewModel.cs" />
+    <Compile Include="Model\ModuleEditorContext.cs" />
+    <Compile Include="Model\ModuleProvider.cs" />
+    <Compile Include="Model\NavigationTransformationViewModel.cs" />
+    <Compile Include="Model\NewsItem.cs" />
+    <Compile Include="Model\NewsItemViewModel.cs" />
+    <Compile Include="Model\NewsletterSettingsContract.cs" />
+    <Compile Include="Model\NewsUrlData.cs" />
+    <Compile Include="Model\NodeType.cs" />
+    <Compile Include="Model\Order.cs" />
+    <Compile Include="Model\OrderAddress.cs" />
+    <Compile Include="Model\OrderDetail.cs" />
+    <Compile Include="Model\OrderDetailVariationLink.cs" />
+    <Compile Include="Model\OrderDiscount.cs" />
+    <Compile Include="Model\OrderDownload.cs" />
+    <Compile Include="Model\OrderPayment.cs" />
+    <Compile Include="Model\OrderStatus.cs" />
+    <Compile Include="Model\OrderStatusHistory.cs" />
     <Compile Include="Model\OrderSummaryChartViewModel.cs" />
     <Compile Include="Model\OrderSummaryHighlightViewModel.cs" />
     <Compile Include="Model\OrderSummaryReportGridViewModel.cs" />
     <Compile Include="Model\OrderSummaryReportViewModel.cs" />
+    <Compile Include="Model\PageCustomFieldsViewModel.cs" />
+    <Compile Include="Model\PageTemplateDraftVersionInfo.cs" />
+    <Compile Include="Model\PageTemplateFramework.cs" />
+    <Compile Include="Model\PageTemplateViewModel.cs" />
+    <Compile Include="Model\PageViewModel.cs" />
+    <Compile Include="Model\PaymentMethod.cs" />
+    <Compile Include="Model\PaymentMethodType.cs" />
+    <Compile Include="Model\Permission.cs" />
+    <Compile Include="Model\PermissionSetCollectionContext.cs" />
+    <Compile Include="Model\PipeMappingTranslationViewModel.cs" />
+    <Compile Include="Model\PipeShortData.cs" />
+    <Compile Include="Model\PolicyItem.cs" />
+    <Compile Include="Model\Pop3SettingsViewModel.cs" />
+    <Compile Include="Model\PostRights.cs" />
+    <Compile Include="Model\PresentationData.cs" />
+    <Compile Include="Model\Price.cs" />
+    <Compile Include="Model\PriceKeyValue.cs" />
+    <Compile Include="Model\ProcessingTaskInfo.cs" />
+    <Compile Include="Model\Product.cs" />
+    <Compile Include="Model\ProductAttribute.cs" />
+    <Compile Include="Model\ProductAttributeLink.cs" />
+    <Compile Include="Model\ProductAttributeValue.cs" />
+    <Compile Include="Model\ProductAttributeValuePairViewModel.cs" />
+    <Compile Include="Model\ProductAttributeViewModel.cs" />
+    <Compile Include="Model\ProductDeliveryType.cs" />
+    <Compile Include="Model\ProductFile.cs" />
+    <Compile Include="Model\ProductImage.cs" />
+    <Compile Include="Model\ProductPrice.cs" />
+    <Compile Include="Model\ProductRating.cs" />
+    <Compile Include="Model\ProductType.cs" />
+    <Compile Include="Model\ProductTypeViewModel.cs" />
+    <Compile Include="Model\ProductUrlData.cs" />
+    <Compile Include="Model\ProductVariation.cs" />
+    <Compile Include="Model\ProductVariationDetail.cs" />
+    <Compile Include="Model\ProductViewModel.cs" />
+    <Compile Include="Model\ProjectInfo.cs" />
+    <Compile Include="Model\PropertyLocalizationType.cs" />
+    <Compile Include="Model\ProviderViewModel.cs" />
+    <Compile Include="Model\PublishingPipeViewModel.cs" />
+    <Compile Include="Model\PublishingPointDetailViewModel.cs" />
+    <Compile Include="Model\PublishingPointViewModel.cs" />
+    <Compile Include="Model\QueryCollectionContext.cs" />
+    <Compile Include="Model\QueryData.cs" />
+    <Compile Include="Model\QueryItem.cs" />
+    <Compile Include="Model\RatingResult.cs" />
+    <Compile Include="Model\RelatedDataItemContextBase.cs" />
+    <Compile Include="Model\RenderChoicesAs.cs" />
+    <Compile Include="Model\ResourceEntry.cs" />
+    <Compile Include="Model\RoleProviderItem.cs" />
+    <Compile Include="Model\RoleProviderPair.cs" />
+    <Compile Include="Model\ShippingMethod.cs" />
+    <Compile Include="Model\ShippingMethodType.cs" />
+    <Compile Include="Model\SimpleDefinitionField.cs" />
+    <Compile Include="Model\SitefinityProfile.cs" />
+    <Compile Include="Model\SitefinitySystemInfo.cs" />
+    <Compile Include="Model\SiteItemLinkViewModel.cs" />
+    <Compile Include="Model\SiteSyncLogEntryViewModel.cs" />
+    <Compile Include="Model\SiteSyncMigrationMappings.cs" />
+    <Compile Include="Model\SiteSyncSiteInfo.cs" />
+    <Compile Include="Model\SizeType.cs" />
+    <Compile Include="Model\SmtpSettingsViewModel.cs" />
+    <Compile Include="Model\SocialShareMode.cs" />
+    <Compile Include="Model\SocialShareSettingsContract.cs" />
+    <Compile Include="Model\SubmitAction.cs" />
+    <Compile Include="Model\SubmitRestriction.cs" />
+    <Compile Include="Model\SubscriberIssueClickViewModel.cs" />
+    <Compile Include="Model\SubscriberViewModel.cs" />
+    <Compile Include="Model\SummaryItemSiteDetails.cs" />
+    <Compile Include="Model\SummaryItemTypeDetails.cs" />
+    <Compile Include="Model\SyncDataInfo.cs" />
+    <Compile Include="Model\SyncItem.cs" />
+    <Compile Include="Model\SyncItemOperation.cs" />
+    <Compile Include="Model\SyncItemType.cs" />
+    <Compile Include="Model\SyncShot.cs" />
+    <Compile Include="Model\SystemStats.cs" />
+    <Compile Include="Model\Tax.cs" />
+    <Compile Include="Model\TaxaFilter.cs" />
+    <Compile Include="Model\TaxClass.cs" />
+    <Compile Include="Model\TaxClassRate.cs" />
+    <Compile Include="Model\TaxViewModel.cs" />
+    <Compile Include="Model\TextEditorToolsetViewModel.cs" />
+    <Compile Include="Model\Theme.cs" />
+    <Compile Include="Model\ThemeType.cs" />
+    <Compile Include="Model\ThunderAuthenticationMode.cs" />
+    <Compile Include="Model\ThunderDynamicModule.cs" />
+    <Compile Include="Model\ThunderDynamicModuleType.cs" />
+    <Compile Include="Model\ThunderPageSiteNode.cs" />
     <Compile Include="Model\TopSellingReportViewModel.cs" />
+    <Compile Include="Model\UIConfigPolicyHandler.cs" />
+    <Compile Include="Model\UISectionItem.cs" />
+    <Compile Include="Model\UrlData.cs" />
+    <Compile Include="Model\UserAuthenticationSettingsContract.cs" />
+    <Compile Include="Model\UserLoggingReason.cs" />
+    <Compile Include="Model\UserProfile.cs" />
+    <Compile Include="Model\UserProfileInfo.cs" />
+    <Compile Include="Model\UserProfileLink.cs" />
+    <Compile Include="Model\UserProfileTypeContext.cs" />
+    <Compile Include="Model\UserProfileTypeViewModel.cs" />
+    <Compile Include="Model\UserProfileUrlData.cs" />
+    <Compile Include="Model\UserProviderItem.cs" />
+    <Compile Include="Model\UserProviderPair.cs" />
+    <Compile Include="Model\UserRolesItem.cs" />
+    <Compile Include="Model\ValidationFormat.cs" />
+    <Compile Include="Model\ValidatorDefinition.cs" />
+    <Compile Include="Model\Video.cs" />
+    <Compile Include="Model\VideoLibrary.cs" />
+    <Compile Include="Model\VideoLibraryItemViewModel.cs" />
+    <Compile Include="Model\VideoViewModel.cs" />
+    <Compile Include="Model\WcfApprovalTrackingRecord.cs" />
+    <Compile Include="Model\WcfBatchChangeParent.cs" />
+    <Compile Include="Model\WcfBlobStorageProvider.cs" />
+    <Compile Include="Model\WcfChange.cs" />
+    <Compile Include="Model\WcfContentLifecycleStatus.cs" />
+    <Compile Include="Model\WcfControlProperty.cs" />
+    <Compile Include="Model\WcfDatabaseMapping.cs" />
+    <Compile Include="Model\WcfDetailFormViewData.cs" />
+    <Compile Include="Model\WcfField.cs" />
+    <Compile Include="Model\WcfFieldDefinition.cs" />
+    <Compile Include="Model\WcfFlatTaxon.cs" />
+    <Compile Include="Model\WcfHierarchicalTaxon.cs" />
+    <Compile Include="Model\WcfItemBase.cs" />
+    <Compile Include="Model\WcfMarketContentItem.cs" />
+    <Compile Include="Model\WcfMembershipUser.cs" />
+    <Compile Include="Model\WcfMembershipUserCollectionContext.cs" />
+    <Compile Include="Model\WcfPage.cs" />
+    <Compile Include="Model\WcfPageContext.cs" />
+    <Compile Include="Model\WcfPageData.cs" />
+    <Compile Include="Model\WcfPageNode.cs" />
+    <Compile Include="Model\WcfPageTemplate.cs" />
+    <Compile Include="Model\WcfPageTemplateContext.cs" />
+    <Compile Include="Model\WcfPasswordChangeData.cs" />
+    <Compile Include="Model\WcfPermission.cs" />
+    <Compile Include="Model\WcfPermissionModule.cs" />
+    <Compile Include="Model\WcfPermissionProvider.cs" />
+    <Compile Include="Model\WcfPermissionSetPermission.cs" />
+    <Compile Include="Model\WcfPipeSettings.cs" />
+    <Compile Include="Model\WcfRole.cs" />
+    <Compile Include="Model\WcfScheduledTask.cs" />
+    <Compile Include="Model\WcfTaxonomy.cs" />
+    <Compile Include="Model\WcfTaxonStatistic.cs" />
+    <Compile Include="Model\WebsiteTemplate.cs" />
+    <Compile Include="Model\WidgetTemplate.cs" />
+    <Compile Include="Model\WorkflowDefinitionViewModel.cs" />
+    <Compile Include="Model\WorkflowPermissionViewModel.cs" />
+    <Compile Include="Model\WorkflowPrincipalType.cs" />
+    <Compile Include="Model\WorkflowScopeViewModel.cs" />
+    <Compile Include="Model\WorkflowType.cs" />
+    <Compile Include="Model\WorkflowVisualElement.cs" />
+    <Compile Include="Model\WorkflowVisualElementsCollection.cs" />
+    <Compile Include="Model\WorkflowVisualElementsContext.cs" />
+    <Compile Include="Model\WorkflowVisualType.cs" />
+    <Compile Include="Model\XmlResourceEntry.cs" />
+    <Compile Include="Model\ZoneEditorWebServiceArgs.cs" />
     <Compile Include="ServiceWrappers\Common\ContentServiceWrapper.cs" />
     <Compile Include="ServiceWrappers\Content\CommentsGenericServiceWrapper.cs" />
     <Compile Include="ServiceWrappers\Content\ContentBlockPageServiceWrapper.cs" />

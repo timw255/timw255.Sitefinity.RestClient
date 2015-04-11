@@ -5,7 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-using Telerik.Sitefinity.Project.Web.Services;
+using timw255.Sitefinity.RestClient.Model;
 
 namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers
 {

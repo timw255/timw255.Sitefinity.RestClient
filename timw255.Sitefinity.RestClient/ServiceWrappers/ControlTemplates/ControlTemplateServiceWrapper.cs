@@ -5,11 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-using Telerik.Sitefinity.Modules.ControlTemplates;
-using Telerik.Sitefinity.Modules.ControlTemplates.Web.Services;
-using Telerik.Sitefinity.Multisite.Web.Services.ViewModel;
-using Telerik.Sitefinity.Pages.Model;
-using Telerik.Sitefinity.Web.Services;
+using timw255.Sitefinity.RestClient.Model;
 using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers;
 
 namespace timw255.Sitefinity.RestClient.ServiceWrappers.ControlTemplates

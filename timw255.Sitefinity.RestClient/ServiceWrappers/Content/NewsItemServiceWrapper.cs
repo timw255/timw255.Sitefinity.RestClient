@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Telerik.Sitefinity.Modules.News.Web.Services;
-using Telerik.Sitefinity.News.Model;
+using timw255.Sitefinity.RestClient.Model;
 
 namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
 {

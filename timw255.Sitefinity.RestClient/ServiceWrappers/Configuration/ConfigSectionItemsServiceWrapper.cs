@@ -5,11 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-using Telerik.Sitefinity.Configuration.Basic;
-using Telerik.Sitefinity.Configuration.Web;
-using Telerik.Sitefinity.Modules.Newsletters.BasicSettings;
-using Telerik.Sitefinity.SiteSettings.Basic;
-using Telerik.Sitefinity.Web.Services;
+using timw255.Sitefinity.RestClient.Model;
 using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers;
 
 namespace timw255.Sitefinity.RestClient.ServiceWrappers.Configuration
@@ -63,7 +59,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Configuration
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "?nodeName={nodeName}&policyHandlerName={policyHandlerName}&policyName={policyName}&provider={provider}&mode={mode}&type={typeName}")]
-        public CollectionContext<ConfigSectionItems.UISectionItem> GetConfigSetionItems(string nodeName, string policyHandlerName, string policyName, string provider, string mode, string typeName)
+        public CollectionContext<UISectionItem> GetConfigSetionItems(string nodeName, string policyHandlerName, string policyName, string provider, string mode, string typeName)
         {
             var request = new RestRequest(this.ServiceUrl + "?nodeName={nodeName}&policyHandlerName={policyHandlerName}&policyName={policyName}&provider={provider}&mode={mode}&type={typeName}", Method.GET);
 
@@ -74,7 +70,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Configuration
             request.AddUrlSegment("mode", mode);
             request.AddUrlSegment("typeName", typeName);
 
-            return ExecuteRequestFor<CollectionContext<ConfigSectionItems.UISectionItem>>(request);
+            return ExecuteRequestFor<CollectionContext<UISectionItem>>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "cultures/?filter={filter}")]
