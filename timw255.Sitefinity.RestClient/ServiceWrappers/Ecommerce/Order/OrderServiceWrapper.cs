@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Telerik.Sitefinity.Web.Services;
+using timw255.Sitefinity.RestClient.Model;
 using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers;
 
 namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
@@ -41,18 +41,18 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
         }
 
         //[WebGet(UriTemplate = "/{orderId}/?provider={provider}")]
-        public ItemContext<Telerik.Sitefinity.Ecommerce.Orders.Model.Order> GetOrder(Guid orderId, string provider)
+        public ItemContext<timw255.Sitefinity.RestClient.Model.Order> GetOrder(Guid orderId, string provider)
         {
             var request = new RestRequest(this.ServiceUrl + "/{orderId}/?provider={provider}", Method.GET);
 
             request.AddUrlSegment("orderId", orderId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<ItemContext<Telerik.Sitefinity.Ecommerce.Orders.Model.Order>>(request);
+            return ExecuteRequestFor<ItemContext<timw255.Sitefinity.RestClient.Model.Order>>(request);
         }
 
         //[WebGet(UriTemplate = "/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}&status={status}")]
-        public CollectionContext<Telerik.Sitefinity.Ecommerce.Orders.Model.Order> GetOrders(string provider, string sortExpression, int skip, int take, string filter, int status)
+        public CollectionContext<timw255.Sitefinity.RestClient.Model.Order> GetOrders(string provider, string sortExpression, int skip, int take, string filter, int status)
         {
             var request = new RestRequest(this.ServiceUrl + "/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}&status={status}", Method.GET);
 
@@ -63,7 +63,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
             request.AddUrlSegment("filter", filter);
             request.AddUrlSegment("status", status.ToString());
 
-            return ExecuteRequestFor<CollectionContext<Telerik.Sitefinity.Ecommerce.Orders.Model.Order>>(request);
+            return ExecuteRequestFor<CollectionContext<timw255.Sitefinity.RestClient.Model.Order>>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/markaspaid/?provider={provider}")]

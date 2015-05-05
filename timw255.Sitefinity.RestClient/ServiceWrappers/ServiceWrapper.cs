@@ -6,9 +6,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading.Tasks;
+using timw255.Sitefinity.RestClient.Model;
 using timw255.Sitefinity.RestClient.SitefinityClient.Exceptions;
 
 namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers
@@ -72,25 +72,23 @@ namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers
 
         public static T DeserializeResponseAs<T>(string j)
         {
-            DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(T));
-
-            using (MemoryStream m = new MemoryStream(System.Text.ASCIIEncoding.ASCII.GetBytes(j)))
-            {
-                T result = (T)serializer.ReadObject(m);
-                return result;
-            }
+            var jsonSettings = new JsonSerializerSettings();
+            jsonSettings.MissingMemberHandling = MissingMemberHandling.Error;
+            
+            T result = JsonConvert.DeserializeObject<T>(j, jsonSettings);
+            return result;
         }
 
         public static string SerializeObject<T>(T o)
         {
-            DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(T));
-
-            using (MemoryStream ms = new MemoryStream())
+            JsonSerializerSettings serializerSettings = new JsonSerializerSettings
             {
-                serializer.WriteObject(ms, o);
-                string j = Encoding.Default.GetString(ms.ToArray());
-                return j;
-            }
+                DateFormatHandling = DateFormatHandling.MicrosoftDateFormat,
+                DateTimeZoneHandling = DateTimeZoneHandling.Utc
+            };
+
+            string j = JsonConvert.SerializeObject(o, serializerSettings);
+            return j;
         }
     }
 }

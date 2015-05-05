@@ -5,8 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Telerik.Sitefinity.Thunder.CodeSync.Contracts;
-using Telerik.Sitefinity.Thunder.Contracts;
+using timw255.Sitefinity.RestClient.Model;
 using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers;
 
 namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder

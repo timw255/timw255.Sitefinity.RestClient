@@ -5,15 +5,13 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-using Telerik.Sitefinity.Modules;
-using Telerik.Sitefinity.Services.Content.Data;
-using Telerik.Sitefinity.Web.Services;
+using timw255.Sitefinity.RestClient.Model;
 using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers;
 
 namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
 {
     public abstract class ContentServiceWrapper<TContent, TContentViewModel> : ServiceWrapper
-        where TContent : Telerik.Sitefinity.GenericContent.Model.Content
+        where TContent : ContentBase//Telerik.Sitefinity.GenericContent.Model.Content
         where TContentViewModel : ContentViewModelBase
     {
         //[WebInvoke(Method = "PUT", UriTemplate = "batch/{newParentId}/?provider={providerName}&workflowOperation={workflowOperation}")]
