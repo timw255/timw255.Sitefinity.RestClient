@@ -60,31 +60,6 @@ namespace timw255.Sitefinity.RestClient
             return response;
         }
 
-        protected internal void ExecuteAsyncRequest(IRestRequest request, Action<IRestResponse> callback, bool isRetry = false)
-        {
-            _restClient.ExecuteAsync(request, response => {
-                if (response.StatusCode == HttpStatusCode.Forbidden || response.StatusCode == HttpStatusCode.Unauthorized)
-                {
-                    if (isRetry)
-                    {
-                        throw new SitefinityException("User already logged in");
-                    }
-                    else
-                    {
-                        SelfLogout();
-                        ExecuteAsyncRequest(request, callback, true);
-                    }
-                }
-
-                if (response.StatusCode != HttpStatusCode.OK)
-                {
-                    throw new InvalidRequestException(response.StatusDescription);
-                }
-
-                callback(response);
-            });
-        }
-
         private void SignIn()
         {
             RestRequest request = new RestRequest("Sitefinity/Authenticate", Method.GET);
