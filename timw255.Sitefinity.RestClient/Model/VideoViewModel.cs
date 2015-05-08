@@ -12,7 +12,6 @@ namespace timw255.Sitefinity.RestClient.Model
         public string CategoryText { get; set; }
         public string Duration { get; set; }
         public int Height { get; set; }
-        public override bool IsManageable { get; set; }
         public string LibraryFullUrl { get; set; }
         public int SnapshotHeight { get; set; }
         public string SnapshotUrl { get; set; }

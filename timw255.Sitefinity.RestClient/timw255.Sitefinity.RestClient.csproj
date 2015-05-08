@@ -50,6 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\UploadResponse.cs" />
+    <Compile Include="ServiceWrappers\Html5UploadHandlerWrapper.cs" />
     <Compile Include="Model\ABCampaignGridViewModel.cs" />
     <Compile Include="Model\ABCampaignViewModel.cs" />
     <Compile Include="Model\AdditionalCssViewModel.cs" />

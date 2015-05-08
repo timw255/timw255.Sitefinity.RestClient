@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace timw255.Sitefinity.RestClient.Model
 {
-    public abstract class MediaContentViewModel : HierarchicalContentViewModelBase, IDynamicFieldsContainer
+    public class MediaContentViewModel : HierarchicalContentViewModelBase, IDynamicFieldsContainer
     {
         public string Description { get; set; }
         public string Extension { get; set; }
         public string FolderTitle { get; set; }
-        public abstract bool IsManageable { get; set; }
+        public bool IsManageable { get; set; }
         public DateTime? LastModified { get; set; }
         public string LibraryTitle { get; set; }
         public string LibraryUrl { get; set; }

@@ -10,7 +10,6 @@ namespace timw255.Sitefinity.RestClient.Model
     public class DocumentViewModel : MediaContentViewModel
     {
         public string CategoryText { get; set; }
-        public override bool IsManageable { get; set; }
         public string LibraryFullUrl { get; set; }
         public string TagsText { get; set; }
 

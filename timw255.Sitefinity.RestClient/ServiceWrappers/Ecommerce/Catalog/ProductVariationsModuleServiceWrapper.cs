@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers;
 
 namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
 {
