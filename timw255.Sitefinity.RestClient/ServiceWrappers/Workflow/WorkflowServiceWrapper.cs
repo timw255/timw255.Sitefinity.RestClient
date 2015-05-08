@@ -29,7 +29,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Workflow
             request.AddUrlSegment("itemCulture", itemCulture);
             request.AddUrlSegment("showMoreActions", showMoreActions.ToString());
 
-            return ExecuteRequestFor<WorkflowVisualElementsCollection>(request);
+            return ExecuteRequest<WorkflowVisualElementsCollection>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/MessageWorkflow/{itemId}/?itemType={itemType}&providerName={providerName}&workflowOperation={workflowOperation}")]
@@ -44,7 +44,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Workflow
 
             request.AddParameter("application/json", SerializeObject(contextBag), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<string>(request);
+            return ExecuteRequest<string>(request);
         }
     }
 }

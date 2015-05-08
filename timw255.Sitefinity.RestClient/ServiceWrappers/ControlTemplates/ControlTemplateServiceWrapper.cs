@@ -27,7 +27,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.ControlTemplates
 
             request.AddParameter("application/json", SerializeObject(ids), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/{id}/?providerName={providerName}")]
@@ -38,7 +38,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.ControlTemplates
             request.AddUrlSegment("id", id.ToString());
             request.AddUrlSegment("providerName", providerName);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "commonProperties/?controlType={controlType}")]
@@ -48,7 +48,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.ControlTemplates
 
             request.AddUrlSegment("controlType", controlType);
             
-            return ExecuteRequestFor<CollectionContext<DataItemPropertyViewModel>>(request);
+            return ExecuteRequest<CollectionContext<DataItemPropertyViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "/{id}/?providerName={providerName}&VersionId={VersionId}")]
@@ -60,7 +60,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.ControlTemplates
             request.AddUrlSegment("providerName", providerName);
             request.AddUrlSegment("VersionId", VersionId.ToString());
 
-            return ExecuteRequestFor<ItemContext<ControlPresentation>>(request);
+            return ExecuteRequest<ItemContext<ControlPresentation>>(request);
         }
 
         //[WebGet(UriTemplate = "?providerName={providerName}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}&templateFilter={templateFilter}")]
@@ -75,7 +75,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.ControlTemplates
             request.AddUrlSegment("filter", filter);
             request.AddUrlSegment("templateFilter", templateFilter);
 
-            return ExecuteRequestFor<CollectionContext<ControlTemplateViewModel>>(request);
+            return ExecuteRequest<CollectionContext<ControlTemplateViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "otherProperties/?controlType={controlType}")]
@@ -85,7 +85,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.ControlTemplates
 
             request.AddUrlSegment("controlType", controlType);
 
-            return ExecuteRequestFor<CollectionContext<DataItemPropertyViewModel>>(request);
+            return ExecuteRequest<CollectionContext<DataItemPropertyViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "/sitelinks/{templateId}/?sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -99,7 +99,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.ControlTemplates
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<SiteItemLinkViewModel>>(request);
+            return ExecuteRequest<CollectionContext<SiteItemLinkViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "/versions/{id}/?providerName={providerName}&VersionId={VersionId}")]
@@ -111,7 +111,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.ControlTemplates
             request.AddUrlSegment("providerName", providerName);
             request.AddUrlSegment("VersionId", VersionId.ToString());
 
-            return ExecuteRequestFor<ItemContext<ControlTemplateVersionInfo>>(request);
+            return ExecuteRequest<ItemContext<ControlTemplateVersionInfo>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "restore/{id}/?providerName={providerName}")]
@@ -124,7 +124,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.ControlTemplates
 
             request.AddParameter("application/json", SerializeObject(context), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ItemContext<ControlPresentation>>(request);
+            return ExecuteRequest<ItemContext<ControlPresentation>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "{id}/?providerName={providerName}")]
@@ -137,7 +137,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.ControlTemplates
 
             request.AddParameter("application/json", SerializeObject(context), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ItemContext<ControlPresentation>>(request);
+            return ExecuteRequest<ItemContext<ControlPresentation>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/savesitelinks/{templateId}/")]
@@ -149,7 +149,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.ControlTemplates
 
             request.AddParameter("application/json", SerializeObject(sharedSiteIDs), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
     }
 }

@@ -40,7 +40,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 
             request.AddParameter("application/json", SerializeObject(pageIDs), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<string[]>(request);
+            return ExecuteRequest<string[]>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "batch/?providerName={providerName}&language={deletedLanguage}&checkRelatingData={checkRelatingData}")]
@@ -54,7 +54,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 
             request.AddParameter("application/json", SerializeObject(Ids), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "batch/move/?providerName={providerName}&direction={direction}&root={root}")]
@@ -83,7 +83,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 
             request.AddParameter("application/json", SerializeObject(sourcePageIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<CollectionContext<PageViewModel>>(request);
+            return ExecuteRequest<CollectionContext<PageViewModel>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "batchPublishDraft/")]
@@ -106,7 +106,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 
             request.AddParameter("application/json", SerializeObject(pageContexts), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<CollectionContext<PageViewModel>>(request);
+            return ExecuteRequest<CollectionContext<PageViewModel>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "batchUnpublishPage/")]
@@ -151,7 +151,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
             request.AddUrlSegment("pageId", pageId.ToString());
             request.AddUrlSegment("newTemplateId", newTemplateId.ToString());
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "CheckPageForChanges/{pageId}/?pageStatus={pageStatus}&pageVersion={pageVersion}&provider={provider}")]
@@ -164,7 +164,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
             request.AddUrlSegment("pageVersion", pageVersion.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<CurrentPageState>(request);
+            return ExecuteRequest<CurrentPageState>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "Pages/versions/copyversiontopage/?itemId={pageId}&versionId={versionId}")]
@@ -200,7 +200,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
             request.AddUrlSegment("deletedLanguage", deletedLanguage);
             request.AddUrlSegment("checkRelatingData", checkRelatingData.ToString());
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "Duplicate/")]
@@ -210,7 +210,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 
             request.AddParameter("application/json", SerializeObject(pageDraftId), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<PageViewModel>(request);
+            return ExecuteRequest<PageViewModel>(request);
         }
 
         //[WebGet(UriTemplate = "children/{parentId}/?provider={provider}&filter={filter}")]
@@ -222,7 +222,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
             request.AddUrlSegment("provider", provider);
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<PageViewModel>>(request);
+            return ExecuteRequest<CollectionContext<PageViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "hierarchy/{parentId}/?provider={provider}&filter={filter}&siteId={siteId}")]
@@ -235,7 +235,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
             request.AddUrlSegment("filter", filter);
             request.AddUrlSegment("siteId", siteId.ToString());
 
-            return ExecuteRequestFor<CollectionContext<WcfPageNode>>(request);
+            return ExecuteRequest<CollectionContext<WcfPageNode>>(request);
         }
 
         //[WebGet(UriTemplate = "Template/GetDefaultBackend/")]
@@ -243,7 +243,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
         {
             var request = new RestRequest(this.ServiceUrl + "Template/GetDefaultBackend/", Method.GET);
 
-            return ExecuteRequestFor<WcfPageTemplate>(request);
+            return ExecuteRequest<WcfPageTemplate>(request);
         }
 
         //[WebGet(UriTemplate = "Template/GetDefault/")]
@@ -251,7 +251,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
         {
             var request = new RestRequest(this.ServiceUrl + "Template/GetDefault/", Method.GET);
 
-            return ExecuteRequestFor<WcfPageTemplate>(request);
+            return ExecuteRequest<WcfPageTemplate>(request);
         }
 
         //[WebGet(UriTemplate = "{pageId}/?providerName={providerName}&duplicate={duplicate}")]
@@ -263,7 +263,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
             request.AddUrlSegment("providerName", providerName);
             request.AddUrlSegment("duplicate", duplicate.ToString());
 
-            return ExecuteRequestFor<WcfPageContext>(request);
+            return ExecuteRequest<WcfPageContext>(request);
         }
 
         //[WebGet(UriTemplate = "?pageFilter={pageFilter}&hierarchyMode={hierarchyMode}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}&root={root}")]
@@ -279,7 +279,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
             request.AddUrlSegment("filter", filter);
             request.AddUrlSegment("root", root);
 
-            return ExecuteRequestFor<CollectionContext<PageViewModel>>(request);
+            return ExecuteRequest<CollectionContext<PageViewModel>>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "tree/?provider={provider}&nodesLimit={nodesLimit}&perLevelLimit={perLevelLimit}&perSubtreeLimit={perSubtreeLimit}&subtreesLimit={subtreesLimit}&root={root}")]
@@ -296,7 +296,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 
             request.AddParameter("application/json", SerializeObject(leafIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<CollectionContext<PageViewModel>>(request);
+            return ExecuteRequest<CollectionContext<PageViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "template/{pageId}/")]
@@ -306,7 +306,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 
             request.AddUrlSegment("pageId", pageId.ToString());
 
-            return ExecuteRequestFor<WcfPageTemplate>(request);
+            return ExecuteRequest<WcfPageTemplate>(request);
         }
 
         //[WebGet(UriTemplate = "Pages/versions/?itemId={itemId}&versionId={versionId}")]
@@ -317,7 +317,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
             request.AddUrlSegment("itemId", itemId.ToString());
             request.AddUrlSegment("versionId", versionId.ToString());
 
-            return ExecuteRequestFor<PageTemplateDraftVersionInfo>(request);
+            return ExecuteRequest<PageTemplateDraftVersionInfo>(request);
         }
 
         //[WebGet(UriTemplate = "predecessor/{pageId}/?provider={provider}&filter={filter}")]
@@ -329,7 +329,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
             request.AddUrlSegment("provider", provider);
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<PageViewModel>>(request);
+            return ExecuteRequest<CollectionContext<PageViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "Templates/versions/?itemId={itemId}&versionId={versionId}")]
@@ -340,7 +340,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
             request.AddUrlSegment("itemId", itemId.ToString());
             request.AddUrlSegment("versionId", versionId.ToString());
 
-            return ExecuteRequestFor<PageTemplateDraftVersionInfo>(request);
+            return ExecuteRequest<PageTemplateDraftVersionInfo>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "template/createFromMaster/?rootTaxonType={rootTaxonType}")]
@@ -352,7 +352,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 
             request.AddParameter("application/json", SerializeObject(masterFilePath), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<WcfPageTemplate>(request);
+            return ExecuteRequest<WcfPageTemplate>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "MoveDown/")]
@@ -430,7 +430,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 
             request.AddParameter("application/json", SerializeObject(pageContext), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<WcfPageContext>(request);
+            return ExecuteRequest<WcfPageContext>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "Template/SetDefault/")]

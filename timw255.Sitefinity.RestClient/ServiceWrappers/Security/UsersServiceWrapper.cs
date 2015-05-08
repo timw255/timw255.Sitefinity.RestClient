@@ -26,7 +26,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
 
             request.AddParameter("application/json", SerializeObject(credentials), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<UserLoggingReason>(request);
+            return ExecuteRequest<UserLoggingReason>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/create/{userId}/?provider={provider}")]
@@ -39,7 +39,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
 
             request.AddParameter("application/json", SerializeObject(user), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<WcfMembershipUser>(request);
+            return ExecuteRequest<WcfMembershipUser>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "{userId}/?provider={provider}")]
@@ -50,7 +50,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
             request.AddUrlSegment("userId", userId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "{userProviderName}/{userName}/{roleId}/?roleProviderName={roleProviderName}")]
@@ -63,7 +63,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
             request.AddUrlSegment("roleId", roleId.ToString());
             request.AddUrlSegment("roleProviderName", roleProviderName);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "/ForceLogout/?userId={userId}&provider={provider}")]
@@ -74,7 +74,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
             request.AddUrlSegment("userId", userId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "all/?provider={usersProvider}&forAllProviders={forAllUserProviders}&sort={sort}&take={take}&skip={skip}&filter={filter}&roleProvider={roleProviderName}&roleId={roleIdString}")]
@@ -91,7 +91,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
             request.AddUrlSegment("roleProviderName", roleProviderName);
             request.AddUrlSegment("roleId", roleId.ToString());
 
-            return ExecuteRequestFor<WcfMembershipUserCollectionContext>(request);
+            return ExecuteRequest<WcfMembershipUserCollectionContext>(request);
         }
 
         //[WebGet(UriTemplate = "/GetLoggedInUsersCount/?provider={provider}")]
@@ -101,7 +101,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
 
             request.AddUrlSegment("provider", provider);
             
-            return ExecuteRequestFor<int>(request);
+            return ExecuteRequest<int>(request);
         }
 
         //[WebGet(UriTemplate = "{userId}/?provider={provider}")]
@@ -112,11 +112,11 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
             request.AddUrlSegment("userId", userId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<WcfMembershipUser>(request);
+            return ExecuteRequest<WcfMembershipUser>(request);
         }
 
         //[WebGet(UriTemplate = "/GetUserProviders/?roleId={roleId}&roleProvider={roleProvider}&userFilter={userFilter}")]
-        public IEnumerable<UserProviderItem> GetUserProviders(Guid roleId, string roleProvider, string userFilter)
+        public CollectionContext<UserProviderItem> GetUserProviders(Guid roleId, string roleProvider, string userFilter)
         {
             var request = new RestRequest(this.ServiceUrl + "/GetUserProviders/?roleId={roleId}&roleProvider={roleProvider}&userFilter={userFilter}", Method.GET);
 
@@ -124,11 +124,11 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
             request.AddUrlSegment("roleProvider", roleProvider);
             request.AddUrlSegment("userFilter", userFilter);
             
-            return ExecuteRequestFor<CollectionContext<UserProviderItem>>(request).Items;
+            return ExecuteRequest<CollectionContext<UserProviderItem>>(request);
         }
 
         //[WebGet(UriTemplate = "{userProviderName}/{userName}/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
-        public IEnumerable<RoleProviderPair> GetUserRoles(string userProviderName, string userName, string provider, string sortExpression, int skip, int take, string filter)
+        public CollectionContext<RoleProviderPair> GetUserRoles(string userProviderName, string userName, string provider, string sortExpression, int skip, int take, string filter)
         {
             var request = new RestRequest(this.ServiceUrl + "{userProviderName}/{userName}/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}", Method.GET);
 
@@ -140,11 +140,11 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<RoleProviderPair>>(request).Items;
+            return ExecuteRequest<CollectionContext<RoleProviderPair>>(request);
         }
 
         //[WebGet(UriTemplate = "/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}&roleId={roleId}&roleProvider={roleProvider}&forAllProviders={forAllProviders}")]
-        public IEnumerable<WcfMembershipUser> GetUsers(string provider, string sortExpression, int skip, int take, string filter, Guid roleId, string roleProvider, bool forAllProviders)
+        public CollectionContext<WcfMembershipUser> GetUsers(string provider, string sortExpression, int skip, int take, string filter, Guid roleId, string roleProvider, bool forAllProviders)
         {
             var request = new RestRequest(this.ServiceUrl + "/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}&roleId={roleId}&roleProvider={roleProvider}&forAllProviders={forAllProviders}", Method.GET);
 
@@ -157,7 +157,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
             request.AddUrlSegment("roleProvider", roleProvider);
             request.AddUrlSegment("forAllProviders", forAllProviders.ToString());
 
-            return ExecuteRequestFor<CollectionContext<WcfMembershipUser>>(request).Items;
+            return ExecuteRequest<CollectionContext<WcfMembershipUser>>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/Logout")]
@@ -165,7 +165,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
         {
             var request = new RestRequest(this.ServiceUrl + "/Logout", Method.GET);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/Logout/{providerName}/{userName}")]
@@ -176,7 +176,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
             request.AddUrlSegment("providerName", providerName);
             request.AddUrlSegment("userName", userName);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/LogoutCredentials")]
@@ -186,7 +186,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
 
             request.AddParameter("application/json", SerializeObject(credentials), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/SaveUserRole/")]
@@ -209,7 +209,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
 
             request.AddParameter("application/json", SerializeObject(user), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<WcfMembershipUser>(request);
+            return ExecuteRequest<WcfMembershipUser>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/updateBasicInfo/{userId}/?provider={provider}")]
@@ -222,7 +222,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
 
             request.AddParameter("application/json", SerializeObject(user), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<WcfMembershipUser>(request);
+            return ExecuteRequest<WcfMembershipUser>(request);
         }
     }
 }

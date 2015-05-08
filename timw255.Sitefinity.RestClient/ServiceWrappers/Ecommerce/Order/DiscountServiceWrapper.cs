@@ -27,7 +27,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
 
             request.AddParameter("application/json", SerializeObject(discountIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/{discountId}/?provider={provider}&language={deletedLanguage}")]
@@ -39,7 +39,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
             request.AddUrlSegment("provider", provider);
             request.AddUrlSegment("deletedLanguage", deletedLanguage);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "/{discountId}/?provider={provider}")]
@@ -50,7 +50,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
             request.AddUrlSegment("discountId", discountId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<ItemContext<Discount>>(request);
+            return ExecuteRequest<ItemContext<Discount>>(request);
         }
 
         //[WebGet(UriTemplate = "/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -64,7 +64,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<Discount>>(request);
+            return ExecuteRequest<CollectionContext<Discount>>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/makeactive/?provider={provider}")]
@@ -76,7 +76,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
 
             request.AddParameter("application/json", SerializeObject(discountId), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/makeinactive/?provider={provider}")]
@@ -88,7 +88,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
 
             request.AddParameter("application/json", SerializeObject(discountId), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/{discountId}/?provider={provider}")]
@@ -101,7 +101,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
 
             request.AddParameter("application/json", SerializeObject(discount), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ItemContext<Discount>>(request);
+            return ExecuteRequest<ItemContext<Discount>>(request);
         }
     }
 }

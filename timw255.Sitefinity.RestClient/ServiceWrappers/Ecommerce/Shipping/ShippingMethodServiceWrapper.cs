@@ -27,7 +27,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Shipping
 
             request.AddParameter("application/json", SerializeObject(shippingMethodIds), ParameterType.RequestBody);
             
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/{shippingMethodId}/?provider={provider}&language={deletedLanguage}")]
@@ -39,7 +39,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Shipping
             request.AddUrlSegment("provider", provider);
             request.AddUrlSegment("deletedLanguage", deletedLanguage);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "/{shippingMethodId}/?provider={provider}")]
@@ -50,7 +50,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Shipping
             request.AddUrlSegment("shippingMethodId", shippingMethodId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<ItemContext<ShippingMethod>>(request);
+            return ExecuteRequest<ItemContext<ShippingMethod>>(request);
         }
 
         //[WebGet(UriTemplate = "/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -64,7 +64,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Shipping
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<ShippingMethod>>(request);
+            return ExecuteRequest<CollectionContext<ShippingMethod>>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/makeactive/?provider={provider}")]
@@ -76,7 +76,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Shipping
 
             request.AddParameter("application/json", SerializeObject(shippingMethodId), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/makeinactive/?provider={provider}")]
@@ -88,7 +88,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Shipping
 
             request.AddParameter("application/json", SerializeObject(shippingMethodId), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/{shippingMethodId}/?provider={provider}")]
@@ -101,7 +101,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Shipping
 
             request.AddParameter("application/json", SerializeObject(shippingMethod), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ItemContext<ShippingMethod>>(request);
+            return ExecuteRequest<ItemContext<ShippingMethod>>(request);
         }
     }
 }

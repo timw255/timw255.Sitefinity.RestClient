@@ -25,7 +25,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
 
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<SystemStats>(request);
+            return ExecuteRequest<SystemStats>(request);
         }
     }
 }

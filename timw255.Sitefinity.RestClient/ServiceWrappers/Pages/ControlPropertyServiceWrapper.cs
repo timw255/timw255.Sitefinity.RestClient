@@ -30,7 +30,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("sortExpression", sortExpression);
 
-            return ExecuteRequestFor<CollectionContext<WcfControlProperty>>(request);
+            return ExecuteRequest<CollectionContext<WcfControlProperty>>(request);
         }
 
         //[WebInvoke(Method="PUT", UriTemplate="/batch/{controlId}/?providerName={providerName}&pageId={pageId}&mediaType={mediaType}&checkLiveVersion={checkLiveVersion}&upgradePageVersion={upgradePageVersion}&propertyLocalization={propertyLocalization}&isOpenedByBrowseAndEdit={isOpenedByBrowseAndEdit}", ResponseFormat=WebMessageFormat.Json)]

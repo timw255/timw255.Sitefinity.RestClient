@@ -26,7 +26,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.SiteSync
 
             request.AddParameter("application/json", SerializeObject(settings), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<IDictionary<string, IDictionary<Guid, IEnumerable<Guid>>>>(request);
+            return ExecuteRequest<IDictionary<string, IDictionary<Guid, IEnumerable<Guid>>>>(request);
         }
 
         //[WebGet(UriTemplate = "/ConfirmConnection/")]
@@ -34,7 +34,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.SiteSync
         {
             var request = new RestRequest(this.ServiceUrl + "/ConfirmConnection/", Method.GET);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/ForceStopSync/")]
@@ -62,7 +62,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.SiteSync
 
             request.AddUrlSegment("syncTaskId", syncTaskId.ToString());
 
-            return ExecuteRequestFor<double>(request);
+            return ExecuteRequest<double>(request);
         }
 
         //[WebGet(UriTemplate = "/GetInfo/")]
@@ -70,7 +70,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.SiteSync
         {
             var request = new RestRequest(this.ServiceUrl + "/GetInfo/", Method.GET);
 
-            return ExecuteRequestFor<TargetServerInfo>(request);
+            return ExecuteRequest<TargetServerInfo>(request);
         }
 
         //[WebGet(UriTemplate = "/LastSyncSummary/?serverId={serverId}")]
@@ -80,7 +80,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.SiteSync
 
             request.AddUrlSegment("serverId", serverId.ToString());
 
-            return ExecuteRequestFor<SyncSummary>(request);
+            return ExecuteRequest<SyncSummary>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/GetPendingItems/?typeName={typeName}&server={server}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -97,7 +97,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.SiteSync
 
             request.AddParameter("application/json", SerializeObject(taxFilter), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<CollectionContext<SiteSyncLogEntryViewModel>>(request);
+            return ExecuteRequest<CollectionContext<SiteSyncLogEntryViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "/GetPendingItemsCount/?typeName={typeName}&server={server}&filter={filter}")]
@@ -109,7 +109,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.SiteSync
             request.AddUrlSegment("server", server);
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<int>(request);
+            return ExecuteRequest<int>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/GetPendingItemsIds/?typeName={typeName}&server={server}")]
@@ -122,7 +122,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.SiteSync
 
             request.AddParameter("application/json", SerializeObject(taxFilter), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<IEnumerable<Guid>>(request);
+            return ExecuteRequest<IEnumerable<Guid>>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/SyncItemErrorDetails/?server={server}&type={type}&getErrors={getErrors}")]
@@ -134,7 +134,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.SiteSync
             request.AddUrlSegment("type", type);
             request.AddUrlSegment("getErrors", getErrors.ToString());
 
-            return ExecuteRequestFor<IEnumerable<string>>(request);
+            return ExecuteRequest<IEnumerable<string>>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/SyncTypeDetails/")]
@@ -144,7 +144,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.SiteSync
 
             request.AddParameter("application/json", SerializeObject(server), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<IEnumerable<SummaryItemTypeDetails>>(request);
+            return ExecuteRequest<IEnumerable<SummaryItemTypeDetails>>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/MigrateProviders/")]
@@ -154,7 +154,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.SiteSync
 
             request.AddParameter("application/json", SerializeObject(providersReq), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<SiteSyncMigrationMappings>(request);
+            return ExecuteRequest<SiteSyncMigrationMappings>(request);
         }
 
         //[WebGet(UriTemplate = "/RequestTargetInfo/?serverId={serverId}")]
@@ -164,7 +164,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.SiteSync
 
             request.AddUrlSegment("serverId", serverId.ToString());
 
-            return ExecuteRequestFor<TargetServerInfo>(request);
+            return ExecuteRequest<TargetServerInfo>(request);
         }
 
         //[WebGet(UriTemplate = "/RequestTargetSites/?url={url}&userName={userName}&password={password}&provider={provider}")]
@@ -177,7 +177,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.SiteSync
             request.AddUrlSegment("password", password);
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<TargetServerInfo>(request);
+            return ExecuteRequest<TargetServerInfo>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/RequestValidation/")]
@@ -187,7 +187,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.SiteSync
 
             request.AddParameter("application/json", SerializeObject(settings), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<string>(request);
+            return ExecuteRequest<string>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/Schedule/")]
@@ -227,7 +227,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.SiteSync
 
             request.AddUrlSegment("serverId", serverId.ToString());
 
-            return ExecuteRequestFor<string>(request);
+            return ExecuteRequest<string>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/Validate/")]
@@ -237,7 +237,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.SiteSync
 
             request.AddParameter("application/json", SerializeObject(validationRequest), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<List<string>>(request);
+            return ExecuteRequest<List<string>>(request);
         }
     }
 }

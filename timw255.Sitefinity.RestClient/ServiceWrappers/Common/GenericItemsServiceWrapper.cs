@@ -33,7 +33,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Common
             request.AddUrlSegment("allProviders", allProviders.ToString());
             request.AddUrlSegment("ignoreAdminUsers", ignoreAdminUsers.ToString());
 
-            return ExecuteRequestFor<CollectionContext<WcfItemBase>>(request);
+            return ExecuteRequest<CollectionContext<WcfItemBase>>(request);
         }
     }
 }

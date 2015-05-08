@@ -26,7 +26,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
 
             request.AddParameter("application/json", SerializeObject(cartDetailIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/{cartDetailId}/?provider={provider}")]
@@ -37,7 +37,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
             request.AddUrlSegment("cartDetailId", cartDetailId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "/{cartDetailId}/?provider={providerName}")]
@@ -48,7 +48,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
             request.AddUrlSegment("cartDetailId", cartDetailId.ToString());
             request.AddUrlSegment("providerName", providerName);
 
-            return ExecuteRequestFor<ItemContext<CartDetail>>(request);
+            return ExecuteRequest<ItemContext<CartDetail>>(request);
         }
 
         //[WebGet(UriTemplate = "/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -62,7 +62,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<CartDetail>>(request);
+            return ExecuteRequest<CollectionContext<CartDetail>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/{cartDetailId}/?provider={providerName}")]
@@ -75,7 +75,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
 
             request.AddParameter("application/json", SerializeObject(cartDetailContext), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ItemContext<CartDetail>>(request);
+            return ExecuteRequest<ItemContext<CartDetail>>(request);
         }
     }
 }

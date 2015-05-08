@@ -27,7 +27,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
             request.AddUrlSegment("roleId", roleId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "{roleId}/{userId}/?provider={provider}")]
@@ -39,7 +39,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
             request.AddUrlSegment("userId", userId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "CountRoleUsers/{roleId}/{provider}")]
@@ -50,7 +50,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
             request.AddUrlSegment("roleId", roleId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<int>(request);
+            return ExecuteRequest<int>(request);
         }
 
         //[WebInvoke(Method = "PUT", RequestFormat = WebMessageFormat.Json, UriTemplate = "countWithLocalChanges/?roleProvider={roleProvider}&roleId={roleId}&filter={filter}&userProvider={userProvider}&forAllProviders={forAllUserProviders}")]
@@ -66,7 +66,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
 
             request.AddParameter("application/json", SerializeObject(localChange), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<int>(request);
+            return ExecuteRequest<int>(request);
         }
 
         //[WebGet(UriTemplate = "{roleId}/?provider={provider}")]
@@ -77,7 +77,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
             request.AddUrlSegment("roleId", roleId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<WcfRole>(request);
+            return ExecuteRequest<WcfRole>(request);
         }
 
         //[WebGet(UriTemplate = "/GetRoleProviders/?abilities={commaSeperatedAbilities}")]
@@ -87,7 +87,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
 
             request.AddUrlSegment("commaSeperatedAbilities", commaSeperatedAbilities);
 
-            return ExecuteRequestFor<CollectionContext<RoleProviderItem>>(request);
+            return ExecuteRequest<CollectionContext<RoleProviderItem>>(request);
         }
 
         //[WebGet(UriTemplate = "/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -101,7 +101,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<WcfRole>>(request);
+            return ExecuteRequest<CollectionContext<WcfRole>>(request);
         }
 
         //[WebGet(UriTemplate = "membershipProviderCount/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}&membershipProvider={membershipProvider}")]
@@ -116,7 +116,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
             request.AddUrlSegment("filter", filter);
             request.AddUrlSegment("membershipProvider", membershipProvider);
 
-            return ExecuteRequestFor<CollectionContext<WcfRole>>(request);
+            return ExecuteRequest<CollectionContext<WcfRole>>(request);
         }
 
         //[WebGet(UriTemplate = "GetRoleUsers/{roleId}/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -131,7 +131,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<UserProviderPair>>(request);
+            return ExecuteRequest<CollectionContext<UserProviderPair>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "GetWcfUsersInRole/{roleId}/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}&userProvider={userProvider}&forAllUserProviders={forAllUserProviders}", RequestFormat = WebMessageFormat.Json)]
@@ -150,7 +150,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
 
             request.AddParameter("application/json", SerializeObject(localChange), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<CollectionContext<WcfMembershipUser>>(request);
+            return ExecuteRequest<CollectionContext<WcfMembershipUser>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "pick/{roleIdString}/?provider={provider}")]
@@ -163,7 +163,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
 
             request.AddParameter("application/json", SerializeObject(userIdsToPickFrom), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<CollectionContext<Guid>>(request);
+            return ExecuteRequest<CollectionContext<Guid>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "{roleId}/?provider={provider}")]
@@ -176,7 +176,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
 
             request.AddParameter("application/json", SerializeObject(role), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<WcfRole>(request);
+            return ExecuteRequest<WcfRole>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "SaveRoleUser/{roleId}/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -193,7 +193,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
 
             request.AddParameter("application/json", SerializeObject(users), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<string>(request);
+            return ExecuteRequest<string>(request);
         }
     }
 }

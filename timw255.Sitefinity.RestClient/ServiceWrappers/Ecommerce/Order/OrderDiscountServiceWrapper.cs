@@ -26,7 +26,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
 
             request.AddParameter("application/json", SerializeObject(orderDiscountIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/{orderDiscountId}/?provider={provider}")]
@@ -37,7 +37,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
             request.AddUrlSegment("orderDiscountId", orderDiscountId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "/{orderDiscountId}/?provider={provider}")]
@@ -48,7 +48,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
             request.AddUrlSegment("orderDiscountId", orderDiscountId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<ItemContext<OrderDiscount>>(request);
+            return ExecuteRequest<ItemContext<OrderDiscount>>(request);
         }
 
         //[WebGet(UriTemplate = "/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -62,7 +62,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<OrderDiscount>>(request);
+            return ExecuteRequest<CollectionContext<OrderDiscount>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/{orderDiscountId}/?provider={provider}")]
@@ -75,7 +75,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
 
             request.AddParameter("application/json", SerializeObject(orderDiscount), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ItemContext<OrderDiscount>>(request);
+            return ExecuteRequest<ItemContext<OrderDiscount>>(request);
         }
     }
 }

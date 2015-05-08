@@ -27,7 +27,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
 
             request.AddParameter("application/json", SerializeObject(campaignIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/issue/batchdelete/?provider={provider}")]
@@ -39,7 +39,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
 
             request.AddParameter("application/json", SerializeObject(issueIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/{campaignId}/?provider={provider}")]
@@ -51,7 +51,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
 
             request.AddParameter("application/json", SerializeObject(campaignId), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/issue/{issueId}/?provider={provider}")]
@@ -62,7 +62,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("issueId", issueId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "/{campaignId}/?provider={provider}")]
@@ -73,7 +73,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("campaignId", campaignId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<CampaignViewModel>(request);
+            return ExecuteRequest<CampaignViewModel>(request);
         }
 
         //[WebGet(UriTemplate = "/issues/{rootCampaignId}/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -88,7 +88,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<IssueGridViewModel>>(request);
+            return ExecuteRequest<CollectionContext<IssueGridViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "/obsolete/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -102,7 +102,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<CampaignViewModel>>(request);
+            return ExecuteRequest<CollectionContext<CampaignViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "/issue/{issueId}/?provider={provider}")]
@@ -113,7 +113,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("issueId", issueId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<IssueViewModel>(request);
+            return ExecuteRequest<IssueViewModel>(request);
         }
 
         //[WebGet(UriTemplate = "/issues/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -127,7 +127,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<IssueGridViewModel>>(request);
+            return ExecuteRequest<CollectionContext<IssueGridViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "/mergetags/{mailingListId}/?provider={provider}")]
@@ -138,7 +138,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("mailingListId", mailingListId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<CollectionContext<MergeTagViewModel>>(request);
+            return ExecuteRequest<CollectionContext<MergeTagViewModel>>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/rawmessage/")]
@@ -148,7 +148,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
 
             request.AddParameter("application/json", SerializeObject(messageBody), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<MessageBodyViewModel>(request);
+            return ExecuteRequest<MessageBodyViewModel>(request);
         }
 
         //[WebGet(UriTemplate = "/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -162,7 +162,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<CampaignGridViewModel>>(request);
+            return ExecuteRequest<CollectionContext<CampaignGridViewModel>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/{campaignId}/?provider={provider}")]
@@ -175,7 +175,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
 
             request.AddParameter("application/json", SerializeObject(campaign), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<CampaignViewModel>(request);
+            return ExecuteRequest<CampaignViewModel>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/issue/{issueId}/?provider={provider}")]
@@ -188,7 +188,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
 
             request.AddParameter("application/json", SerializeObject(issue), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<IssueViewModel>(request);
+            return ExecuteRequest<IssueViewModel>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/schedule/{campaignId}/?provider={provider}")]

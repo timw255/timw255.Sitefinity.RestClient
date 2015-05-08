@@ -26,7 +26,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
             request.AddUrlSegment("draftId", draftId.ToString());
             request.AddUrlSegment("newTemplateId", newTemplateId.ToString());
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/changeTemplate/{pageId}/?newTemplateId={newTemplateId}")]
@@ -50,7 +50,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 
             request.AddParameter("application/json", SerializeObject(themeName), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/Form/{draftId}/")]
@@ -60,7 +60,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 
             request.AddUrlSegment("draftId", draftId.ToString());
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/Page/{draftId}/")]
@@ -70,7 +70,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 
             request.AddUrlSegment("draftId", draftId.ToString());
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/Template/{draftId}/")]
@@ -80,7 +80,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 
             request.AddUrlSegment("draftId", draftId.ToString());
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/Page/InitializeSplitPage/?sourceLanguage={sourceLanguage}&targetLanguage={targetLanguage}")]
@@ -105,7 +105,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 
             request.AddParameter("application/json", SerializeObject(formViewModel), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/Page/Publish/")]
@@ -115,7 +115,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 
             request.AddParameter("application/json", SerializeObject(draftId), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/Template/Publish/")]
@@ -125,7 +125,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 
             request.AddParameter("application/json", SerializeObject(draftId), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "rollback/")]
@@ -135,7 +135,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 
             request.AddParameter("application/json", SerializeObject(state), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ZoneEditorWebServiceArgs>(request);
+            return ExecuteRequest<ZoneEditorWebServiceArgs>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/Form/Save/{draftId}/")]
@@ -147,7 +147,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 
             request.AddParameter("application/json", SerializeObject(formViewModel), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/Page/Save/?workflowOperation={workflowOperation}")]
@@ -159,7 +159,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 
             request.AddParameter("application/json", SerializeObject(wcfPageData), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/Template/Save/")]
@@ -169,7 +169,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 
             request.AddParameter("application/json", SerializeObject(draftId), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "setoverride/{editable}/")]
@@ -181,7 +181,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 
             request.AddParameter("application/json", SerializeObject(state), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ZoneEditorWebServiceArgs>(request);
+            return ExecuteRequest<ZoneEditorWebServiceArgs>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/Page/LocalizationStrategy/?strategy={strategy}&copyData={copyData}")]
@@ -264,7 +264,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 
             request.AddParameter("application/json", SerializeObject(state), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ZoneEditorWebServiceArgs>(request);
+            return ExecuteRequest<ZoneEditorWebServiceArgs>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/Layout/Style/{LayoutControlId}/{PageId}/{isTemplate}/")]
@@ -278,7 +278,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 
             request.AddParameter("application/json", SerializeObject(args), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ZoneEditorWebServiceArgs>(request);
+            return ExecuteRequest<ZoneEditorWebServiceArgs>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/Layout/")]
@@ -288,7 +288,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Pages
 
             request.AddParameter("application/json", SerializeObject(state), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ZoneEditorWebServiceArgs>(request);
+            return ExecuteRequest<ZoneEditorWebServiceArgs>(request);
         }
     }
 }

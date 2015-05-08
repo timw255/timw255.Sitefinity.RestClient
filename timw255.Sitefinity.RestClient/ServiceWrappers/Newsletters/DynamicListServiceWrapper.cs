@@ -25,7 +25,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
 
             request.AddUrlSegment("dynamicListProviderName", dynamicListProviderName);
 
-            return ExecuteRequestFor<CollectionContext<DynamicListInfoViewModel>>(request);
+            return ExecuteRequest<CollectionContext<DynamicListInfoViewModel>>(request);
         }
     }
 }

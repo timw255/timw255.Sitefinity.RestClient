@@ -28,7 +28,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Localization
             request.AddUrlSegment("filter", filter);
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<CollectionContext<string>>(request);
+            return ExecuteRequest<CollectionContext<string>>(request);
         }
     }
 }

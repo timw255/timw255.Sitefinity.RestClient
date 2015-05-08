@@ -26,7 +26,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
 
             request.AddParameter("application/json", SerializeObject(productVariationIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/parent/{parentId}/batch/?provider={provider}")]
@@ -39,7 +39,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
 
             request.AddParameter("application/json", SerializeObject(productVariationIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/{productVariationId}/?provider={provider}")]
@@ -50,7 +50,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
             request.AddUrlSegment("productVariationId", productVariationId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/parent/{parentId}/{productVariationId}/?provider={provider}")]
@@ -62,7 +62,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
             request.AddUrlSegment("productVariationId", productVariationId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/attributevalues/{productId}/?provider={provider}")]
@@ -73,7 +73,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
             request.AddUrlSegment("productId", productId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<CollectionContext<ProductAttributeValuePairViewModel>>(request);
+            return ExecuteRequest<CollectionContext<ProductAttributeValuePairViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "/parent/{parentId}/{productVariationId}/?provider={provider}")]
@@ -85,7 +85,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
             request.AddUrlSegment("productVariationId", productVariationId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<ItemContext<ProductVariation>>(request);
+            return ExecuteRequest<ItemContext<ProductVariation>>(request);
         }
 
         //[WebGet(UriTemplate = "/{productVariationId}/?provider={provider}")]
@@ -96,7 +96,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
             request.AddUrlSegment("productVariationId", productVariationId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<ItemContext<ProductVariation>>(request);
+            return ExecuteRequest<ItemContext<ProductVariation>>(request);
         }
 
         //[WebGet(UriTemplate = "/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -110,7 +110,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<ProductVariation>>(request);
+            return ExecuteRequest<CollectionContext<ProductVariation>>(request);
         }
 
         //[WebGet(UriTemplate = "/parent/{parentId}/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -125,7 +125,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<ProductVariation>>(request);
+            return ExecuteRequest<CollectionContext<ProductVariation>>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/makeactive/?provider={provider}")]
@@ -137,7 +137,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
 
             request.AddParameter("application/json", SerializeObject(productVariationId), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/makeinactive/?provider={provider}")]
@@ -149,7 +149,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
 
             request.AddParameter("application/json", SerializeObject(productVariationId), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/{productVariationId}/?provider={provider}")]
@@ -162,7 +162,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
 
             request.AddParameter("application/json", SerializeObject(productVariation), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ItemContext<ProductVariation>>(request);
+            return ExecuteRequest<ItemContext<ProductVariation>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/parent/{parentId}/?provider={provider}")]
@@ -175,7 +175,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
 
             request.AddParameter("application/json", SerializeObject(attributes), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/parent/{parentId}/{productVariationId}/?provider={provider}")]
@@ -189,7 +189,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
 
             request.AddParameter("application/json", SerializeObject(serializedProductVariation), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ItemContext<ProductVariation>>(request);
+            return ExecuteRequest<ItemContext<ProductVariation>>(request);
         }
     }
 }

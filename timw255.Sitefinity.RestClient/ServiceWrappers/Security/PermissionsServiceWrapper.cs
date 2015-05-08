@@ -33,7 +33,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
             request.AddUrlSegment("transactionName", transactionName);
             request.AddUrlSegment("dynamicDataProviderName", dynamicDataProviderName);
 
-            return ExecuteRequestFor<PermissionSetCollectionContext>(request);
+            return ExecuteRequest<PermissionSetCollectionContext>(request);
         }
 
         //[WebGet(UriTemplate = "/GetManagerProviders/?managerClassName={managerClassName}")]
@@ -43,7 +43,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
 
             request.AddUrlSegment("managerClassName", managerClassName);
 
-            return ExecuteRequestFor<CollectionContext<ModuleProvider>>(request);
+            return ExecuteRequest<CollectionContext<ModuleProvider>>(request);
         }
 
         //[WebGet(UriTemplate = "/GetModuleProviders/?moduleName={moduleName}")]
@@ -53,7 +53,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
 
             request.AddUrlSegment("moduleName", moduleName);
 
-            return ExecuteRequestFor<CollectionContext<ModuleProvider>>(request);
+            return ExecuteRequest<CollectionContext<ModuleProvider>>(request);
         }
 
         //[WebGet(UriTemplate = "/GetModules/?dataProviderName={dataProviderName}&securedObjectID={securedObjectID}&managerClassName={managerClassName}")]
@@ -65,7 +65,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
             request.AddUrlSegment("securedObjectID", securedObjectID);
             request.AddUrlSegment("managerClassName", managerClassName);
 
-            return ExecuteRequestFor<CollectionContext<WcfPermissionModule>>(request);
+            return ExecuteRequest<CollectionContext<WcfPermissionModule>>(request);
         }
 
         //[WebGet(UriTemplate = "/GetPermissionSets/?permissionsSetName={permissionsSetName}&dataProviderName={dataProviderName}&managerClassName={managerClassName}&principalID={principalID}&securedObjectID={securedObjectID}&securedObjectType={securedObjectType}&dynamicDataProviderName={dynamicDataProviderName}")]
@@ -81,7 +81,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
             request.AddUrlSegment("securedObjectType", securedObjectType);
             request.AddUrlSegment("dynamicDataProviderName", dynamicDataProviderName);
 
-            return ExecuteRequestFor<PermissionSetCollectionContext>(request);
+            return ExecuteRequest<PermissionSetCollectionContext>(request);
         }
 
         //[WebGet(UriTemplate = "/?permissionsSetName={commaDelimitedPermissionsSetNames}&dataProviderName={dataProviderName}&managerClassName={managerClassName}&securedObjectID={securedObjectID}&securedObjectType={securedObjectType}&dynamicDataProviderName={dynamicDataProviderName}")]
@@ -96,7 +96,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
             request.AddUrlSegment("securedObjectType", securedObjectType);
             request.AddUrlSegment("dynamicDataProviderName", dynamicDataProviderName);
 
-            return ExecuteRequestFor<PermissionSetCollectionContext>(request);
+            return ExecuteRequest<PermissionSetCollectionContext>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/{permissionsSetName}/{dataProviderName}/?permissionObjectRootID={permissionObjectRootID}&managerClassName={managerClassName}&principalID={principalID}&securedObjectID={securedObjectID}&securedObjectType={securedObjectType}&dynamicDataProviderName={dynamicDataProviderName}")]

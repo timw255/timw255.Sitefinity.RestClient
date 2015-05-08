@@ -27,7 +27,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
 
             request.AddParameter("application/json", SerializeObject(mailingListIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/{mailingListId}/?provider={provider}")]
@@ -38,7 +38,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("mailingListId", mailingListId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "/{mailingListId}/?provider={provider}")]
@@ -49,7 +49,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("mailingListId", mailingListId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<MailingListViewModel>(request);
+            return ExecuteRequest<MailingListViewModel>(request);
         }
 
         //[WebGet(UriTemplate = "/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -63,7 +63,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<MailingListViewModel>>(request);
+            return ExecuteRequest<CollectionContext<MailingListViewModel>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/{mailingListId}/?provider={provider}")]
@@ -76,7 +76,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
 
             request.AddParameter("application/json", SerializeObject(mailingList), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<MailingListViewModel>(request);
+            return ExecuteRequest<MailingListViewModel>(request);
         }
     }
 }

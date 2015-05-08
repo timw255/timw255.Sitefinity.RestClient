@@ -30,11 +30,11 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Taxonomies
 
             request.AddParameter("application/json", SerializeObject(Ids), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //7.3 - [WebInvoke(Method = "DELETE", UriTemplate = "{taxonomyId}/?provider={provider}&lang={lang}")]
-        //8.0 - [WebInvoke(Method="DELETE", UriTemplate="{taxonomyId}/?provider={provider}&lang={lang}&deleteTaxaOnly={deleteTaxaOnly}", ResponseFormat=WebMessageFormat.Json)]
+        //8.0 - [WebInvoke(Method="DELETE", UriTemplate="{taxonomyId}/?provider={provider}&lang={lang}&deleteTaxaOnly={deleteTaxaOnly}")]
         public bool DeleteTaxonomy(Guid taxonomyId, string provider, string lang, bool deleteTaxaOnly)
         {
             var request = new RestRequest(this.ServiceUrl + "{taxonomyId}/?provider={provider}&lang={lang}&deleteTaxaOnly={deleteTaxaOnly}", Method.DELETE);
@@ -44,7 +44,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Taxonomies
             request.AddUrlSegment("lang", lang);
             request.AddUrlSegment("deleteTaxaOnly", deleteTaxaOnly.ToString());
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}&taxonomyType={taxonomyType}")]
@@ -59,7 +59,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Taxonomies
             request.AddUrlSegment("filter", filter);
             request.AddUrlSegment("taxonomyType", taxonomyType);
 
-            return ExecuteRequestFor<CollectionContext<WcfTaxonomy>>(request);
+            return ExecuteRequest<CollectionContext<WcfTaxonomy>>(request);
         }
 
         //[WebGet(UriTemplate = "{taxonomyId}/?provider={provider}")]
@@ -70,7 +70,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Taxonomies
             request.AddUrlSegment("taxonomyId", taxonomyId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<WcfTaxonomy>(request);
+            return ExecuteRequest<WcfTaxonomy>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/{taxonomyId}/?provider={provider}")]
@@ -83,7 +83,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Taxonomies
 
             request.AddParameter("application/json", SerializeObject(taxonomy), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<WcfTaxonomy>(request);
+            return ExecuteRequest<WcfTaxonomy>(request);
         }
     }
 }

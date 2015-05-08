@@ -24,7 +24,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
 
             request.AddUrlSegment("cultureName", cultureName);
 
-            return ExecuteRequestFor<CollectionContext<ContentBlockPageViewModel>>(request);
+            return ExecuteRequest<CollectionContext<ContentBlockPageViewModel>>(request);
         }
     }
 }

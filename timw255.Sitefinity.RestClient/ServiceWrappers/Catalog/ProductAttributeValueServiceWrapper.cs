@@ -29,7 +29,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Catalog
 
             request.AddParameter("application/json", SerializeObject(valueIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/parent/{parentId}/batch/?provider={provider}&language={deletedLanguage}")]
@@ -43,7 +43,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Catalog
 
             request.AddParameter("application/json", SerializeObject(valueIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/parent/{parentId}/batch/place/?providerName={providerName}&placePosition={placePosition}&destination={destination}")]
@@ -58,7 +58,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Catalog
 
             request.AddParameter("application/json", SerializeObject(sourceAttributeValueIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<CollectionContext<ProductAttributeValue>>(request);
+            return ExecuteRequest<CollectionContext<ProductAttributeValue>>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/{valueId}/?provider={provider}&language={deletedLanguage}")]
@@ -70,7 +70,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Catalog
             request.AddUrlSegment("provider", provider);
             request.AddUrlSegment("deletedLanguage", deletedLanguage);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/parent/{parentId}/{valueId}/?provider={provider}&language={deletedLanguage}")]
@@ -83,7 +83,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Catalog
             request.AddUrlSegment("provider", provider);
             request.AddUrlSegment("deletedLanguage", deletedLanguage);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "/active/parent/{parentId}/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -98,7 +98,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Catalog
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<ProductAttributeValue>>(request);
+            return ExecuteRequest<CollectionContext<ProductAttributeValue>>(request);
         }
 
         //[WebGet(UriTemplate = "/parent/{parentId}/{valueId}/?provider={provider}")]
@@ -110,7 +110,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Catalog
             request.AddUrlSegment("valueId", valueId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<ItemContext<ProductAttributeValue>>(request);
+            return ExecuteRequest<ItemContext<ProductAttributeValue>>(request);
         }
 
         //[WebGet(UriTemplate = "/parent/{parentId}/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -125,7 +125,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Catalog
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<ProductAttributeValue>>(request);
+            return ExecuteRequest<CollectionContext<ProductAttributeValue>>(request);
         }
 
         //[WebGet(UriTemplate = "/predecessor/{valueId}/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -140,7 +140,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Catalog
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<ProductAttributeValue>>(request);
+            return ExecuteRequest<CollectionContext<ProductAttributeValue>>(request);
         }
 
         //[WebGet(UriTemplate = "/{valueId}/?provider={provider}")]
@@ -151,7 +151,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Catalog
             request.AddUrlSegment("valueId", valueId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<ItemContext<ProductAttributeValue>>(request);
+            return ExecuteRequest<ItemContext<ProductAttributeValue>>(request);
         }
 
         //[WebGet(UriTemplate = "/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -165,7 +165,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Catalog
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<ProductAttributeValue>>(request);
+            return ExecuteRequest<CollectionContext<ProductAttributeValue>>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/makeactive/?provider={provider}")]
@@ -177,7 +177,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Catalog
 
             request.AddParameter("application/json", SerializeObject(attributeValueId), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/makeinactive/?provider={provider}")]
@@ -189,7 +189,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Catalog
 
             request.AddParameter("application/json", SerializeObject(attributeValueId), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/{valueId}/?provider={provider}")]
@@ -202,7 +202,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Catalog
 
             request.AddParameter("application/json", SerializeObject(value), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ItemContext<ProductAttributeValue>>(request);
+            return ExecuteRequest<ItemContext<ProductAttributeValue>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/parent/{parentId}/{valueId}/?provider={provider}")]
@@ -216,7 +216,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Catalog
 
             request.AddParameter("application/json", SerializeObject(value), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ItemContext<ProductAttributeValue>>(request);
+            return ExecuteRequest<ItemContext<ProductAttributeValue>>(request);
         }
     }
 }

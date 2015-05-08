@@ -42,7 +42,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Forms
 
             request.AddParameter("application/json", SerializeObject(ids), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "entries/{formName}/batch/?providerName={providerName}")]
@@ -55,7 +55,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Forms
 
             request.AddParameter("application/json", SerializeObject(ids), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "batch/publish/?providerName={providerName}")]
@@ -67,7 +67,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Forms
 
             request.AddParameter("application/json", SerializeObject(formIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "batch/?providerName={providerName}")]
@@ -103,7 +103,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Forms
             request.AddUrlSegment("providerName", providerName);
             request.AddUrlSegment("languageToDelete", languageToDelete);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/entry/{formName}/{entryId}/?providerName={providerName}&itemType={itemType}&managerType={managerType}")]
@@ -117,7 +117,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Forms
             request.AddUrlSegment("itemType", itemType);
             request.AddUrlSegment("managerType", managerType);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "{formId}/?providerName={providerName}&duplicate={duplicate}")]
@@ -129,7 +129,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Forms
             request.AddUrlSegment("providerName", providerName);
             request.AddUrlSegment("duplicate", duplicate.ToString());
 
-            return ExecuteRequestFor<FormDescriptionViewModelContext>(request);
+            return ExecuteRequest<FormDescriptionViewModelContext>(request);
         }
 
         //[WebGet(UriTemplate = "?sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}&notShared={notShared}")]
@@ -143,7 +143,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Forms
             request.AddUrlSegment("filter", filter);
             request.AddUrlSegment("notShared", notShared.ToString());
             
-            return ExecuteRequestFor<CollectionContext<FormDescriptionViewModel>>(request);
+            return ExecuteRequest<CollectionContext<FormDescriptionViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "entries/{formName}/?providerName={providerName}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}&itemType={itemType}&managerType={managerType}&siteId={siteId}")]
@@ -161,7 +161,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Forms
             request.AddUrlSegment("managerType", managerType);
             request.AddUrlSegment("siteId", siteId.ToString());
 
-            return ExecuteRequestFor<CollectionContext<FormEntry>>(request);
+            return ExecuteRequest<CollectionContext<FormEntry>>(request);
         }
 
         //[WebGet(UriTemplate = "/entry/{formName}/{entryId}/?providerName={providerName}&itemType={itemType}&managerType={managerType}")]
@@ -175,7 +175,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Forms
             request.AddUrlSegment("itemType", itemType);
             request.AddUrlSegment("managerType", managerType);
 
-            return ExecuteRequestFor<FormEntry>(request);
+            return ExecuteRequest<FormEntry>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/publish/?providerName={providerName}")]
@@ -201,7 +201,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Forms
 
             request.AddParameter("application/json", SerializeObject(formContext), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<FormDescriptionViewModelContext>(request);
+            return ExecuteRequest<FormDescriptionViewModelContext>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/entry/{formName}/{entryId}/?providerName={providerName}&itemType={itemType}&managerType={managerType}")]
@@ -217,7 +217,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Forms
 
             request.AddParameter("application/json", SerializeObject(entry), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ContentItemContext<FormEntry>>(request);
+            return ExecuteRequest<ContentItemContext<FormEntry>>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "share/?providerName={providerName}", BodyStyle = WebMessageBodyStyle.Wrapped)]

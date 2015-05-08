@@ -32,7 +32,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.DynamicModules
 
             request.AddParameter("application/json", SerializeObject(ids), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "batch/?provider={providerName}&workflowOperation={workflowOperation}&language={deletedLanguage}&itemType={itemType}&checkRelatingData={checkRelatingData}")]
@@ -48,7 +48,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.DynamicModules
 
             request.AddParameter("application/json", SerializeObject(Ids), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "batch/publish/?provider={providerName}&workflowOperation={workflowOperation}&itemType={itemType}")]
@@ -62,7 +62,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.DynamicModules
 
             request.AddParameter("application/json", SerializeObject(ids), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "parent/{parentId}/batch/publish/?provider={providerName}&workflowOperation={workflowOperation}&itemType={itemType}")]
@@ -77,7 +77,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.DynamicModules
 
             request.AddParameter("application/json", SerializeObject(ids), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "batch/unpublish/?provider={providerName}&workflowOperation={workflowOperation}&itemType={itemType}")]
@@ -91,7 +91,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.DynamicModules
 
             request.AddParameter("application/json", SerializeObject(ids), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/parent/{parentId}/batch/unpublish/?provider={providerName}&workflowOperation={workflowOperation}&itemType={itemType}")]
@@ -106,7 +106,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.DynamicModules
 
             request.AddParameter("application/json", SerializeObject(ids), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/parent/{parentId}/{dataItemId}/?provider={providerName}&itemType={itemType}&parentItemType={parentItemType}&parentType={parentType}&checkRelatingData={checkRelatingData}&language={deletedLanguage}&version={version}")]
@@ -124,7 +124,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.DynamicModules
             request.AddUrlSegment("deletedLanguage", deletedLanguage);
             request.AddUrlSegment("version", version);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/{dataItemId}/?provider={provider}&itemType={itemType}&language={deletedLanguage}&checkRelatingData={checkRelatingData}&version={version}")]
@@ -139,7 +139,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.DynamicModules
             request.AddUrlSegment("checkRelatingData", checkRelatingData.ToString());
             request.AddUrlSegment("version", version);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/temp/{dataItemId}/?provider={provider}&force={force}")]
@@ -151,7 +151,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.DynamicModules
             request.AddUrlSegment("provider", provider);
             request.AddUrlSegment("force", force.ToString());
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "/parent/{parentId}/{itemId}/?provider={providerName}&version={version}&itemType={itemType}&duplicate={duplicate}&checkOut={checkOut}")]
@@ -167,7 +167,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.DynamicModules
             request.AddUrlSegment("duplicate", duplicate.ToString());
             request.AddUrlSegment("checkOut", checkOut.ToString());
 
-            return ExecuteRequestFor<DynamicItemContext>(request);
+            return ExecuteRequest<DynamicItemContext>(request);
         }
 
         //[WebGet(UriTemplate = "/parent/{parentId}/?provider={provider}&itemType={itemType}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -183,7 +183,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.DynamicModules
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<DynamicContent>>(request);
+            return ExecuteRequest<CollectionContext<DynamicContent>>(request);
         }
 
         //[WebGet(UriTemplate = "children/{parentId}/?provider={provider}&filter={filter}&itemType={itemType}")]
@@ -196,7 +196,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.DynamicModules
             request.AddUrlSegment("filter", filter);
             request.AddUrlSegment("itemType", itemType);
             
-            return ExecuteRequestFor<CollectionContext<DynamicContent>>(request);
+            return ExecuteRequest<CollectionContext<DynamicContent>>(request);
         }
 
         //[WebGet(UriTemplate = "/{itemId}/?provider={providerName}&itemType={itemType}&version={version}&duplicate={duplicate}&checkOut={checkOut}")]
@@ -211,7 +211,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.DynamicModules
             request.AddUrlSegment("duplicate", duplicate.ToString());
             request.AddUrlSegment("checkOut", checkOut.ToString());
 
-            return ExecuteRequestFor<DynamicItemContext>(request);
+            return ExecuteRequest<DynamicItemContext>(request);
         }
 
         //[WebGet(UriTemplate = "/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}&itemType={itemType}&hierarchyMode={hierarchyMode}")]
@@ -227,7 +227,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.DynamicModules
             request.AddUrlSegment("itemType", itemType);
             request.AddUrlSegment("hierarchyMode", hierarchyMode.ToString());
 
-            return ExecuteRequestFor<CollectionContext<DynamicContent>>(request);
+            return ExecuteRequest<CollectionContext<DynamicContent>>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "tree/?provider={provider}&childLimit={childLimit}&perLevelLimit={perLevelLimit}&perSubtreeLimit={perSubtreeLimit}&subtreesLimit={subtreesLimit}&root={root}&itemType={itemType}&filter={filter}")]
@@ -246,7 +246,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.DynamicModules
 
             request.AddParameter("application/json", SerializeObject(leafIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<CollectionContext<DynamicContent>>(request);
+            return ExecuteRequest<CollectionContext<DynamicContent>>(request);
         }
 
         //[WebGet(UriTemplate = "/live/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}&itemType={itemType}&radius={radius}&latitude={latitude}&longitude={longitude}&geoLocationProperty={geoLocationProperty}")]
@@ -265,7 +265,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.DynamicModules
             request.AddUrlSegment("longitude", longitude.ToString());
             request.AddUrlSegment("geoLocationProperty", geoLocationProperty);
 
-            return ExecuteRequestFor<CollectionContext<DynamicContent>>(request);
+            return ExecuteRequest<CollectionContext<DynamicContent>>(request);
         }
 
         //[WebGet(UriTemplate = "predecessor/{itemId}/?provider={providerName}&itemType={itemType}&filter={filter}")]
@@ -278,7 +278,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.DynamicModules
             request.AddUrlSegment("itemType", itemType);
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<DynamicContent>>(request);
+            return ExecuteRequest<CollectionContext<DynamicContent>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/parent/{parentId}/{dataItemId}/?provider={provider}&itemType={itemType}&workflowOperation={workflowOperation}&parentType={parentType}&newParentId={newParentId}")]
@@ -296,7 +296,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.DynamicModules
 
             request.AddParameter("application/json", SerializeObject(dataItem), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<DynamicItemContext>(request);
+            return ExecuteRequest<DynamicItemContext>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/{dataItemId}/?provider={provider}&itemType={itemType}&workflowOperation={workflowOperation}")]
@@ -311,7 +311,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.DynamicModules
 
             request.AddParameter("application/json", SerializeObject(dataItem), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<DynamicItemContext>(request);
+            return ExecuteRequest<DynamicItemContext>(request);
         }
     }
 }

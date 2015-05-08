@@ -7,6 +7,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using timw255.Sitefinity.RestClient.Exceptions;
+using timw255.Sitefinity.RestClient.SitefinityClient.Exceptions;
 
 namespace timw255.Sitefinity.RestClient
 {
@@ -51,7 +52,37 @@ namespace timw255.Sitefinity.RestClient
                 }
             }
 
+            if (response.StatusCode != HttpStatusCode.OK)
+            {
+                throw new InvalidRequestException(response.StatusDescription);
+            }
+
             return response;
+        }
+
+        protected internal void ExecuteAsyncRequest(IRestRequest request, Action<IRestResponse> callback, bool isRetry = false)
+        {
+            _restClient.ExecuteAsync(request, response => {
+                if (response.StatusCode == HttpStatusCode.Forbidden || response.StatusCode == HttpStatusCode.Unauthorized)
+                {
+                    if (isRetry)
+                    {
+                        throw new SitefinityException("User already logged in");
+                    }
+                    else
+                    {
+                        SelfLogout();
+                        ExecuteAsyncRequest(request, callback, true);
+                    }
+                }
+
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    throw new InvalidRequestException(response.StatusDescription);
+                }
+
+                callback(response);
+            });
         }
 
         private void SignIn()
@@ -103,7 +134,6 @@ namespace timw255.Sitefinity.RestClient
             request.AddParameter("__EVENTARGUMENT", "");
 
             _restClient.Execute(request);
-
             return;
         }
 

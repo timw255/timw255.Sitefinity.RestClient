@@ -32,7 +32,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Taxonomies
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<WcfMarketContentItem>>(request);
+            return ExecuteRequest<CollectionContext<WcfMarketContentItem>>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/{taxonId}/?provider={provider}")]
@@ -43,7 +43,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Taxonomies
             request.AddUrlSegment("taxonId", taxonId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<CollectionContext<WcfTaxonStatistic>>(request);
+            return ExecuteRequest<CollectionContext<WcfTaxonStatistic>>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/items/{taxonId}/{itemIDs}/?itemType={itemType}&provider={provider}&itemProvider={itemProvider}")]
@@ -57,7 +57,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Taxonomies
             request.AddUrlSegment("provider", provider);
             request.AddUrlSegment("itemProvider", itemProvider);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
     }
 }

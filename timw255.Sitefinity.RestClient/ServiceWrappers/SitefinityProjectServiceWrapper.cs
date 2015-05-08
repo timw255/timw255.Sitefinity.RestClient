@@ -22,7 +22,7 @@ namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers
         {
             var request = new RestRequest(this.ServiceUrl + "/All", Method.GET);
 
-            return ExecuteRequestFor<ProjectInfo>(request);
+            return ExecuteRequest<ProjectInfo>(request);
         }
 
         //[WebGet(UriTemplate = "/Name")]
@@ -30,7 +30,7 @@ namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers
         {
             var request = new RestRequest(this.ServiceUrl + "/Name", Method.GET);
 
-            return ExecuteRequestFor<string>(request);
+            return ExecuteRequest<string>(request);
         }
 
         //[WebGet(UriTemplate = "/SfVersion")]
@@ -38,7 +38,7 @@ namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers
         {
             var request = new RestRequest(this.ServiceUrl + "/SfVersion", Method.GET);
 
-            return ExecuteRequestFor<string>(request);
+            return ExecuteRequest<string>(request);
         }
 
         //[WebGet(UriTemplate = "/Version")]
@@ -46,7 +46,7 @@ namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers
         {
             var request = new RestRequest(this.ServiceUrl + "/Version", Method.GET);
 
-            return ExecuteRequestFor<string>(request);
+            return ExecuteRequest<string>(request);
         }
     }
 }

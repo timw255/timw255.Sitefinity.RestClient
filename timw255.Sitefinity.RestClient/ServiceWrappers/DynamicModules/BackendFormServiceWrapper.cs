@@ -25,7 +25,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.DynamicModules
 
             request.AddUrlSegment("parentTypeId", parentTypeId.ToString());
 
-            return ExecuteRequestFor<CollectionContext<SectionFieldWrapper>>(request);
+            return ExecuteRequest<CollectionContext<SectionFieldWrapper>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/?parentTypeId={parentTypeId}")]

@@ -25,7 +25,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
 
             request.AddParameter("application/json", SerializeObject(settings), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<string>(request);
+            return ExecuteRequest<string>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/smtptest/")]
@@ -35,7 +35,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
 
             request.AddParameter("application/json", SerializeObject(settings), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<string>(request);
+            return ExecuteRequest<string>(request);
         }
     }
 }

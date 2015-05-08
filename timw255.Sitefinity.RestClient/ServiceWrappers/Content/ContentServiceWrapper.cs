@@ -25,7 +25,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
 
             request.AddParameter("application/json", SerializeObject(ids), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/parent/{parentId}/batch/?provider={providerName}&workflowOperation={workflowOperation}&language={deletedLanguage}&checkRelatingData={checkRelatingData}")]
@@ -41,7 +41,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
 
             request.AddParameter("application/json", SerializeObject(Ids), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "batch/?provider={providerName}&workflowOperation={workflowOperation}&language={deletedLanguage}&checkRelatingData={checkRelatingData}")]
@@ -56,7 +56,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
 
             request.AddParameter("application/json", SerializeObject(Ids), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "parent/{parentId}/batch/move/?providerName={providerName}&direction={direction}")]
@@ -85,7 +85,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
 
             request.AddParameter("application/json", SerializeObject(sourcePageIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<CollectionContext<TContentViewModel>>(request);
+            return ExecuteRequest<CollectionContext<TContentViewModel>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "batch/publish/?provider={providerName}&workflowOperation={workflowOperation}")]
@@ -98,7 +98,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
 
             request.AddParameter("application/json", SerializeObject(ids), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "parent/{parentId}/batch/publish/?provider={providerName}&workflowOperation={workflowOperation}")]
@@ -112,7 +112,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
 
             request.AddParameter("application/json", SerializeObject(ids), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/batchReorder/?provider={providerName}&workflowOperation={workflowOperation}")]
@@ -138,7 +138,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
 
             request.AddParameter("application/json", SerializeObject(ids), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "parent/{parentId}/batch/unpublish/?provider={providerName}&workflowOperation={workflowOperation}")]
@@ -152,7 +152,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
 
             request.AddParameter("application/json", SerializeObject(ids), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "{contentId}/canRate/?provider={providerName}")]
@@ -163,7 +163,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
             request.AddUrlSegment("contentId", contentId.ToString());
             request.AddUrlSegment("providerName", providerName);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/parent/{parentId}/{id}/?provider={providerName}&newParentId={newParentId}&version={version}&published={published}&checkOut={checkOut}&workflowOperation={workflowOperation}&checkRelatingData={checkRelatingData}")]
@@ -181,7 +181,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
             request.AddUrlSegment("workflowOperation", workflowOperation);
             request.AddUrlSegment("checkRelatingData", checkRelatingData.ToString());
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/{contentId}/?provider={providerName}&version={version}&published={published}&checkOut={checkOut}&workflowOperation={workflowOperation}&language={deletedLanguage}&checkRelatingData={checkRelatingData}")]
@@ -198,7 +198,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
             request.AddUrlSegment("deletedLanguage", deletedLanguage);
             request.AddUrlSegment("checkRelatingData", checkRelatingData.ToString());
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/temp/{contentId}/?provider={providerName}&force={force}&workflowOperation={workflowOperation}")]
@@ -211,7 +211,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
             request.AddUrlSegment("force", force.ToString());
             request.AddUrlSegment("workflowOperation", workflowOperation);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/parent/{parentId}/{contentId}/?provider={providerName}&newParentId={newParentId}&version={version}&published={published}&checkOut={checkOut}&workflowOperation={workflowOperation}&duplicate={duplicate}")]
@@ -229,7 +229,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
             request.AddUrlSegment("workflowOperation", workflowOperation);
             request.AddUrlSegment("duplicate", duplicate.ToString());
 
-            return ExecuteRequestFor<ContentItemContext<TContent>>(request);
+            return ExecuteRequest<ContentItemContext<TContent>>(request);
         }
 
         //[WebGet(UriTemplate = "/folder/parent/{parentId}/{contentId}/?provider={providerName}")]
@@ -241,7 +241,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
             request.AddUrlSegment("contentId", contentId.ToString());
             request.AddUrlSegment("providerName", providerName);
 
-            return ExecuteRequestFor<ItemContext<FolderDetailViewModel>>(request);
+            return ExecuteRequest<ItemContext<FolderDetailViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "/parent/{parentId}/?provider={providerName}&sortExpression={sortExpression}&filter={filter}&skip={skip}&take={take}&workflowOperation={workflowOperation}&excludeFolders={excludeFolders}&includeSubFoldersItems={includeSubFoldersItems}")]
@@ -259,7 +259,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
             request.AddUrlSegment("excludeFolders", excludeFolders.ToString());
             request.AddUrlSegment("includeSubFoldersItems", includeSubFoldersItems.ToString());
 
-            return ExecuteRequestFor<CollectionContext<TContentViewModel>>(request);
+            return ExecuteRequest<CollectionContext<TContentViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "/{contentId}/?provider={providerName}&version={version}&published={published}&checkOut={checkOut}&workflowOperation={workflowOperation}&duplicate={duplicate}")]
@@ -275,7 +275,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
             request.AddUrlSegment("workflowOperation", workflowOperation);
             request.AddUrlSegment("duplicate", duplicate.ToString());
 
-            return ExecuteRequestFor<ContentItemContext<TContent>>(request);
+            return ExecuteRequest<ContentItemContext<TContent>>(request);
         }
 
         //[WebGet(UriTemplate = "/?sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}&provider={providerName}&workflowOperation={workflowOperation}")]
@@ -290,7 +290,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
             request.AddUrlSegment("providerName", providerName);
             request.AddUrlSegment("workflowOperation", workflowOperation);
 
-            return ExecuteRequestFor<CollectionContext<TContentViewModel>>(request);
+            return ExecuteRequest<CollectionContext<TContentViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "/folders/?sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}&provider={providerName}&hierarchyMode={hierarchyMode}")]
@@ -305,7 +305,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
             request.AddUrlSegment("providerName", providerName);
             request.AddUrlSegment("hierarchyMode", hierarchyMode.ToString());
 
-            return ExecuteRequestFor<CollectionContext<FolderViewModel>>(request);
+            return ExecuteRequest<CollectionContext<FolderViewModel>>(request);
         }
 
         //7.3 - [WebInvoke(Method = "POST", UriTemplate = "/folders/tree/?provider={provider}")]
@@ -321,7 +321,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
             request.AddUrlSegment("filter", filter);
             request.AddUrlSegment("hierarchyMode", hierarchyMode.ToString());
 
-            return ExecuteRequestFor<CollectionContext<FolderViewModel>>(request);
+            return ExecuteRequest<CollectionContext<FolderViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "/live/{contentId}/?provider={providerName}")]
@@ -332,7 +332,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
             request.AddUrlSegment("contentId", contentId.ToString());
             request.AddUrlSegment("providerName", providerName);
 
-            return ExecuteRequestFor<ContentItemContext<TContent>>(request);
+            return ExecuteRequest<ContentItemContext<TContent>>(request);
         }
 
         //[WebGet(UriTemplate = "/folders/predecessors/{folderId}/?provider={providerName}&sortExpression={sortExpression}&excludeNeighbours={excludeNeighbours}")]
@@ -345,7 +345,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
             request.AddUrlSegment("sortExpression", sortExpression);
             request.AddUrlSegment("excludeNeighbours", excludeNeighbours.ToString());
 
-            return ExecuteRequestFor<CollectionContext<FolderViewModel>>(request);
+            return ExecuteRequest<CollectionContext<FolderViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "/predecessor/{contentId}/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}&onlyPath={onlyPath}&itemType={itemType}")]
@@ -362,7 +362,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
             request.AddUrlSegment("onlyPath", onlyPath.ToString());
             request.AddUrlSegment("itemType", itemType);
 
-            return ExecuteRequestFor<CollectionContext<TContentViewModel>>(request);
+            return ExecuteRequest<CollectionContext<TContentViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "{contentId}/rating/?provider={providerName}")]
@@ -373,7 +373,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
             request.AddUrlSegment("contentId", contentId.ToString());
             request.AddUrlSegment("providerName", providerName);
 
-            return ExecuteRequestFor<decimal>(request);
+            return ExecuteRequest<decimal>(request);
         }
 
         //[WebGet(UriTemplate = "/folders/{folderId}/?sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}&provider={providerName}&hierarchyMode={hierarchyMode}")]
@@ -389,7 +389,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
             request.AddUrlSegment("providerName", providerName);
             request.AddUrlSegment("hierarchyMode", hierarchyMode.ToString());
 
-            return ExecuteRequestFor<CollectionContext<FolderViewModel>>(request);
+            return ExecuteRequest<CollectionContext<FolderViewModel>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/reorder/{contentId}/?provider={providerName}&oldPosition={oldPosition}&newPosition={newPosition}&workflowOperation={workflowOperation}")]
@@ -414,7 +414,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
             request.AddUrlSegment("contentId", contentId.ToString());
             request.AddUrlSegment("providerName", providerName);
 
-            return ExecuteRequestFor<RatingResult>(request);
+            return ExecuteRequest<RatingResult>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/parent/{parentId}/{contentId}/?provider={providerName}&newParentId={newParentId}&version={version}&published={published}&checkOut={checkOut}&workflowOperation={workflowOperation}")]
@@ -433,7 +433,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
 
             request.AddParameter("application/json", SerializeObject(content), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ContentItemContext<TContent>>(request);
+            return ExecuteRequest<ContentItemContext<TContent>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/folder/parent/{parentId}/{contentId}/?provider={providerName}")]
@@ -447,7 +447,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
 
             request.AddParameter("application/json", SerializeObject(content), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ItemContext<FolderDetailViewModel>>(request);
+            return ExecuteRequest<ItemContext<FolderDetailViewModel>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/{contentId}/?provider={providerName}&version={version}&published={published}&checkOut={checkOut}&workflowOperation={workflowOperation}")]
@@ -464,7 +464,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
 
             request.AddParameter("application/json", SerializeObject(content), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ContentItemContext<TContent>>(request);
+            return ExecuteRequest<ContentItemContext<TContent>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "{contentId}/rating/?provider={providerName}", RequestFormat = WebMessageFormat.Json)]
@@ -477,7 +477,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Content
 
             request.AddParameter("application/json", SerializeObject(value), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<RatingResult>(request);
+            return ExecuteRequest<RatingResult>(request);
         }
     }
 }

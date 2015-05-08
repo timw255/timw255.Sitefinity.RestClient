@@ -26,7 +26,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
 
             request.AddParameter("application/json", SerializeObject(customerAddressIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/{customerAddressId}/?provider={provider}")]
@@ -37,7 +37,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
             request.AddUrlSegment("customerAddressId", customerAddressId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "/{customerAddressId}/?provider={providerName}")]
@@ -48,7 +48,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
             request.AddUrlSegment("customerAddressId", customerAddressId.ToString());
             request.AddUrlSegment("providerName", providerName);
 
-            return ExecuteRequestFor<ItemContext<CustomerAddress>>(request);
+            return ExecuteRequest<ItemContext<CustomerAddress>>(request);
         }
 
         //[WebGet(UriTemplate = "/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -62,7 +62,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<CustomerAddress>>(request);
+            return ExecuteRequest<CollectionContext<CustomerAddress>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/{customerAddressId}/?provider={providerName}")]
@@ -75,7 +75,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
 
             request.AddParameter("application/json", SerializeObject(customerAddressContext), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ItemContext<CustomerAddress>>(request);
+            return ExecuteRequest<ItemContext<CustomerAddress>>(request);
         }
     }
 }

@@ -30,7 +30,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<SubscriberIssueClickViewModel>>(request);
+            return ExecuteRequest<CollectionContext<SubscriberIssueClickViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "/clicksbyhour/{issueId}/?provider={provider}")]
@@ -41,7 +41,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("issueId", issueId.ToString());
             request.AddUrlSegment("provider", provider);
             
-            return ExecuteRequestFor<IEnumerable<KeyValuePair<string, int>>>(request);
+            return ExecuteRequest<IEnumerable<KeyValuePair<string, int>>>(request);
         }
 
         //[Obsolete("Use Campaign.svc/issues/ instead.")]
@@ -56,7 +56,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<IEnumerable<IssueReportViewModel>>(request);
+            return ExecuteRequest<IEnumerable<IssueReportViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "/subscriberclicks/{issueId}/?subscriberId={subscriberId}&provider={provider}")]
@@ -68,7 +68,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("subscriberId", subscriberId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<IEnumerable<SubscriberIssueClickViewModel>>(request);
+            return ExecuteRequest<IEnumerable<SubscriberIssueClickViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "/subscribers/{issueId}/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}&byClickedLink={byClickedLink}")]
@@ -84,7 +84,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("filter", filter);
             request.AddUrlSegment("byClickedLink", byClickedLink);
 
-            return ExecuteRequestFor<CollectionContext<IssueSubscriberViewModel>>(request);
+            return ExecuteRequest<CollectionContext<IssueSubscriberViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "/totallinkclicks/{issueId}/?search={search}&provider={provider}")]
@@ -96,7 +96,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("search", search);
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<IEnumerable<KeyValuePair<string, int>>>(request);
+            return ExecuteRequest<IEnumerable<KeyValuePair<string, int>>>(request);
         }
 
         //[WebGet(UriTemplate = "/uniqueclicks/{issueId}/?provider={provider}")]
@@ -107,7 +107,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("issueId", issueId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<IEnumerable<ClickStatViewModel>>(request);
+            return ExecuteRequest<IEnumerable<ClickStatViewModel>>(request);
         }
     }
 }

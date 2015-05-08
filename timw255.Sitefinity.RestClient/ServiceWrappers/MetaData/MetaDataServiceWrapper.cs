@@ -26,7 +26,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.MetaData
             request.AddUrlSegment("fieldId", fieldId.ToString());
             request.AddUrlSegment("typeId", typeId.ToString());
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "{fieldId}/?typeId={typeId}")]
@@ -37,7 +37,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.MetaData
             request.AddUrlSegment("fieldId", fieldId.ToString());
             request.AddUrlSegment("typeId", typeId.ToString());
 
-            return ExecuteRequestFor<FieldType>(request);
+            return ExecuteRequest<FieldType>(request);
         }
 
         //[WebGet(UriTemplate = "/?typeId={typeId}")]
@@ -47,7 +47,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.MetaData
 
             request.AddUrlSegment("typeId", typeId.ToString());
 
-            return ExecuteRequestFor<CollectionContext<FieldType>>(request);
+            return ExecuteRequest<CollectionContext<FieldType>>(request);
         }
     }
 }

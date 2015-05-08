@@ -27,7 +27,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.UserProfiles
 
             request.AddParameter("application/json", SerializeObject(Ids), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "{profileTypeId}/?providerName={providerName}")]
@@ -38,7 +38,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.UserProfiles
             request.AddUrlSegment("profileTypeId", profileTypeId.ToString());
             request.AddUrlSegment("providerName", providerName);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "/{userId}")]
@@ -48,7 +48,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.UserProfiles
 
             request.AddUrlSegment("userId", userId.ToString());
 
-            return ExecuteRequestFor<string>(request);
+            return ExecuteRequest<string>(request);
         }
 
         //[WebGet(UriTemplate = "{profileTypeId}/?providerName={providerName}&duplicate={duplicate}")]
@@ -60,7 +60,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.UserProfiles
             request.AddUrlSegment("providerName", providerName);
             request.AddUrlSegment("duplicate", duplicate.ToString());
 
-            return ExecuteRequestFor<UserProfileTypeContext>(request);
+            return ExecuteRequest<UserProfileTypeContext>(request);
         }
 
         //[WebGet(UriTemplate = "?userProfilesFilter={userProfilesFilter}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}&root={root}")]
@@ -75,7 +75,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.UserProfiles
             request.AddUrlSegment("filter", filter);
             request.AddUrlSegment("root", root);
 
-            return ExecuteRequestFor<CollectionContext<UserProfileTypeViewModel>>(request);
+            return ExecuteRequest<CollectionContext<UserProfileTypeViewModel>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "{userId}")]
@@ -87,7 +87,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.UserProfiles
 
             request.AddParameter("application/json", SerializeObject(profileData), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<string>(request);
+            return ExecuteRequest<string>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "{profileTypeId}/?providerName={providerName}&duplicate={duplicate}")]
@@ -101,7 +101,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.UserProfiles
 
             request.AddParameter("application/json", SerializeObject(profileTypeDataContext), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<UserProfileTypeContext>(request);
+            return ExecuteRequest<UserProfileTypeContext>(request);
         }
     }
 }

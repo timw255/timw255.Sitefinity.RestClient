@@ -25,7 +25,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Versioning
 
             request.AddUrlSegment("changeId", changeId.ToString());
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "/?itemType={itemType}&itemId={itemId}")]
@@ -36,7 +36,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Versioning
             request.AddUrlSegment("itemType", itemType);
             request.AddUrlSegment("itemId", itemId.ToString());
 
-            return ExecuteRequestFor<CollectionContext<WcfChange>>(request);
+            return ExecuteRequest<CollectionContext<WcfChange>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/{changeId}/")]
@@ -48,7 +48,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Versioning
 
             request.AddParameter("application/json", SerializeObject(comment), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
     }
 }

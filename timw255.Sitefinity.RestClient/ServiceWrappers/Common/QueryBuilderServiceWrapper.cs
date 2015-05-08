@@ -42,7 +42,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Common
             request.AddUrlSegment("filter", filter);
             request.AddUrlSegment("providerName", providerName);
 
-            return ExecuteRequestFor<QueryCollectionContext>(request);
+            return ExecuteRequest<QueryCollectionContext>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/{id}/?provider={providerName}")]
@@ -53,7 +53,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Common
             request.AddUrlSegment("id", id.ToString());
             request.AddUrlSegment("providerName", providerName);
 
-            return ExecuteRequestFor<QueryData>(request);
+            return ExecuteRequest<QueryData>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "", RequestFormat = WebMessageFormat.Json)]
@@ -63,7 +63,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Common
 
             request.AddParameter("application/json", SerializeObject(query), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<string>(request);
+            return ExecuteRequest<string>(request);
         }
     }
 }

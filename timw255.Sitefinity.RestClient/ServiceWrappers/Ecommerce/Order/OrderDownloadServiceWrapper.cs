@@ -26,7 +26,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
 
             request.AddParameter("application/json", SerializeObject(orderDownloadIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/{orderDownloadId}/?provider={provider}")]
@@ -37,7 +37,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
             request.AddUrlSegment("orderDownloadId", orderDownloadId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "/{orderDownloadId}/?provider={provider}")]
@@ -48,7 +48,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
             request.AddUrlSegment("orderDownloadId", orderDownloadId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<ItemContext<OrderDownload>>(request);
+            return ExecuteRequest<ItemContext<OrderDownload>>(request);
         }
 
         //[WebGet(UriTemplate = "/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -62,7 +62,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<OrderDownload>>(request);
+            return ExecuteRequest<CollectionContext<OrderDownload>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/{orderDownloadId}/?provider={provider}")]
@@ -75,7 +75,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
 
             request.AddParameter("application/json", SerializeObject(orderDownload), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ItemContext<OrderDownload>>(request);
+            return ExecuteRequest<ItemContext<OrderDownload>>(request);
         }
     }
 }

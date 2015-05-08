@@ -42,7 +42,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Taxonomies
 
             request.AddParameter("application/json", SerializeObject(taxonIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "batchpath/?provider={provider}&itemType={itemType}")]
@@ -55,7 +55,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Taxonomies
 
             request.AddParameter("application/json", SerializeObject(taxonIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<CollectionContext<WcfHierarchicalTaxon[]>>(request);
+            return ExecuteRequest<CollectionContext<WcfHierarchicalTaxon[]>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "batchmovedown/{taxonomyId}/?provider={provider}")]
@@ -111,7 +111,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Taxonomies
             request.AddUrlSegment("itemType", itemType);
             request.AddUrlSegment("lang", lang);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "/predecessor/{taxonId}/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}&onlyPath={onlyPath}&itemType={itemType}&mode={mode}")]
@@ -129,7 +129,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Taxonomies
             request.AddUrlSegment("itemType", itemType);
             request.AddUrlSegment("mode", mode);
 
-            return ExecuteRequestFor<CollectionContext<WcfHierarchicalTaxon>>(request);
+            return ExecuteRequest<CollectionContext<WcfHierarchicalTaxon>>(request);
         }
 
         //[WebGet(UriTemplate = "subtaxa/{taxonId}/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}&itemType={itemType}&mode={mode}")]
@@ -146,7 +146,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Taxonomies
             request.AddUrlSegment("itemType", itemType);
             request.AddUrlSegment("mode", mode);
 
-            return ExecuteRequestFor<CollectionContext<WcfHierarchicalTaxon>>(request);
+            return ExecuteRequest<CollectionContext<WcfHierarchicalTaxon>>(request);
         }
 
         //[WebGet(UriTemplate = "/{taxonomyId}/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}&itemType={itemType}&hierarchyMode={hierarchyMode}&mode={mode}")]
@@ -164,7 +164,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Taxonomies
             request.AddUrlSegment("hierarchyMode", hierarchyMode.ToString());
             request.AddUrlSegment("mode", mode);
 
-            return ExecuteRequestFor<CollectionContext<WcfHierarchicalTaxon>>(request);
+            return ExecuteRequest<CollectionContext<WcfHierarchicalTaxon>>(request);
         }
 
         //[WebGet(UriTemplate = "{taxonomyId}/{taxonId}/?provider={provider}&ordinal={ordinal}&insertionPosition={insertionPosition}&itemType={itemType}")]
@@ -179,7 +179,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Taxonomies
             request.AddUrlSegment("insertionPosition", insertionPosition);
             request.AddUrlSegment("itemType", itemType);
 
-            return ExecuteRequestFor<WcfHierarchicalTaxon>(request);
+            return ExecuteRequest<WcfHierarchicalTaxon>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "movedown/{taxonomyId}/{taxonId}/?provider={provider}")]
@@ -221,7 +221,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Taxonomies
 
             request.AddParameter("application/json", SerializeObject(wcfTaxon), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<WcfHierarchicalTaxon>(request);
+            return ExecuteRequest<WcfHierarchicalTaxon>(request);
         }
     }
 }

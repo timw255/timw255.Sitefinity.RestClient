@@ -24,7 +24,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce
 
             request.AddUrlSegment("currentPrice", currentPrice.ToString());
 
-            return ExecuteRequestFor<List<PriceKeyValue>>(request);
+            return ExecuteRequest<List<PriceKeyValue>>(request);
         }
 
         //[WebInvoke(Method="GET", UriTemplate="/AllowedCurrencies/?siteId={siteId}", ResponseFormat=WebMessageFormat.Json)]
@@ -34,7 +34,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce
 
             request.AddUrlSegment("siteId", siteId.ToString());
 
-            return ExecuteRequestFor<CurrenciesAllowedSettingsViewModel>(request);
+            return ExecuteRequest<CurrenciesAllowedSettingsViewModel>(request);
         }
 
         //[WebInvoke(Method="GET", UriTemplate="/Currencies/?filter={filter}", ResponseFormat=WebMessageFormat.Json)]
@@ -44,7 +44,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce
 
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<CurrencyViewModel>>(request);
+            return ExecuteRequest<CollectionContext<CurrencyViewModel>>(request);
         }
 
         //[WebInvoke(Method="GET", UriTemplate="/ExchangeRates/?serviceId={serviceId}&requestedCurrencies={requestedCurrencies}&defaultCurrency={defaultCurrency}&siteId={siteId}", ResponseFormat=WebMessageFormat.Json)]
@@ -57,7 +57,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce
             request.AddUrlSegment("defaultCurrency", defaultCurrency);
             request.AddUrlSegment("siteId", siteId.ToString());
 
-            return ExecuteRequestFor<ExchangeRateResponseViewModel>(request);
+            return ExecuteRequest<ExchangeRateResponseViewModel>(request);
         }
 
         //[WebInvoke(Method="PUT", UriTemplate="allowedcurrencies/{key}/?siteId={siteId}", ResponseFormat=WebMessageFormat.Json)]

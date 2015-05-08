@@ -24,7 +24,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Lists
 
             request.AddUrlSegment("listItemId", listItemId.ToString());
 
-            return ExecuteRequestFor<string>(request);
+            return ExecuteRequest<string>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "Set/SortOrder/{listId}/{sortOrder}/", ResponseFormat = WebMessageFormat.Xml)]

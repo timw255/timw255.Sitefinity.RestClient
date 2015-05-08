@@ -27,7 +27,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
 
             request.AddParameter("application/json", SerializeObject(templateIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/{templateId}/?provider={provider}")]
@@ -38,7 +38,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("templateId", templateId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "/{templateId}/?provider={provider}")]
@@ -49,7 +49,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("templateId", templateId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<MessageBodyViewModel>(request);
+            return ExecuteRequest<MessageBodyViewModel>(request);
         }
 
         //[WebGet(UriTemplate = "/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -63,7 +63,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<MessageBodyViewModel>>(request);
+            return ExecuteRequest<CollectionContext<MessageBodyViewModel>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/{templateId}/?provider={provider}&isPageBased={isPageBased}")]
@@ -77,7 +77,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
 
             request.AddParameter("application/json", SerializeObject(template), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<MessageBodyViewModel>(request);
+            return ExecuteRequest<MessageBodyViewModel>(request);
         }
     }
 }

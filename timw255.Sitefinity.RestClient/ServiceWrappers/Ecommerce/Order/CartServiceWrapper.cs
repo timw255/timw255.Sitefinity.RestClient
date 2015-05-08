@@ -33,7 +33,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
             request.AddUrlSegment("cartOrderId", cartOrderId.ToString());
             request.AddUrlSegment("providerName", providerName);
 
-            return ExecuteRequestFor<ItemContext<CartOrder>>(request);
+            return ExecuteRequest<ItemContext<CartOrder>>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/?orderId={cartOrderId}&provider={providerName}")]
@@ -44,7 +44,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Order
             request.AddUrlSegment("cartOrderId", String.Empty);
             request.AddUrlSegment("providerName", providerName);
 
-            return ExecuteRequestFor<ItemContext<CartOrder>>(request);
+            return ExecuteRequest<ItemContext<CartOrder>>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/?cartDetailId={cartDetailId}&provider={providerName}")]

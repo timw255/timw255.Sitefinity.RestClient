@@ -30,7 +30,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Localization
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<ResourceEntry>>(request);
+            return ExecuteRequest<CollectionContext<ResourceEntry>>(request);
         }
 
         //[WebInvoke(Method="PUT", UriTemplate="{uiCulture}/{classId}/{key}/?provider={provider}")]
@@ -45,7 +45,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Localization
 
             request.AddParameter("application/json", SerializeObject(propertyBag), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ResourceEntry>(request);
+            return ExecuteRequest<ResourceEntry>(request);
         }
     }
 }

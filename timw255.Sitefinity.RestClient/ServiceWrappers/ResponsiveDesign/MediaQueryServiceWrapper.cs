@@ -27,7 +27,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.ResponsiveDesign
 
             request.AddParameter("application/json", SerializeObject(mediaQueryIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/{mediaQueryId}/?provider={provider}")]
@@ -38,7 +38,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.ResponsiveDesign
             request.AddUrlSegment("mediaQueryId", mediaQueryId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -52,7 +52,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.ResponsiveDesign
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<MediaQueryViewModel>>(request);
+            return ExecuteRequest<CollectionContext<MediaQueryViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "/{mediaQueryId}/?provider={providerName}")]
@@ -63,7 +63,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.ResponsiveDesign
             request.AddUrlSegment("mediaQueryId", mediaQueryId.ToString());
             request.AddUrlSegment("providerName", providerName);
 
-            return ExecuteRequestFor<ItemContext<MediaQueryViewModel>>(request);
+            return ExecuteRequest<ItemContext<MediaQueryViewModel>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/{mediaQueryId}/?provider={provider}&itemType={itemType}")]
@@ -77,7 +77,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.ResponsiveDesign
 
             request.AddParameter("application/json", SerializeObject(mediaQuery), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ItemContext<MediaQueryViewModel>>(request);
+            return ExecuteRequest<ItemContext<MediaQueryViewModel>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/mql/?provider={provider}")]
@@ -89,7 +89,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.ResponsiveDesign
 
             request.AddParameter("application/json", SerializeObject(mediaQueryLink), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ItemContext<MediaQueryLinkViewModel>>(request);
+            return ExecuteRequest<ItemContext<MediaQueryLinkViewModel>>(request);
         }
     }
 }

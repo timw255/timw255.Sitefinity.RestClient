@@ -39,7 +39,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
 
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<MembershipProviderSetting>(request);
+            return ExecuteRequest<MembershipProviderSetting>(request);
         }
 
         //[WebGet(UriTemplate = "getRolesForUser/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -53,7 +53,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<UserRolesItem>>(request);
+            return ExecuteRequest<CollectionContext<UserRolesItem>>(request);
         }
 
         //[WebGet(UriTemplate = "recoverPassword/{username}/?provider={provider}&answer={answer}")]
@@ -65,7 +65,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Security
             request.AddUrlSegment("provider", provider);
             request.AddUrlSegment("answer", answer);
 
-            return ExecuteRequestFor<string>(request);
+            return ExecuteRequest<string>(request);
         }
     }
 }

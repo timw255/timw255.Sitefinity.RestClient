@@ -25,7 +25,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.BlobStorage
 
             request.AddParameter("application/json", SerializeObject(providers), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "providerstats/?libraryType={libraryType}&provider={provider}")]
@@ -36,7 +36,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.BlobStorage
             request.AddUrlSegment("libraryType", libraryType);
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<CollectionContext<WcfBlobStorageProvider>>(request);
+            return ExecuteRequest<CollectionContext<WcfBlobStorageProvider>>(request);
         }
 
         //[WebGet(UriTemplate = "providers/")]
@@ -44,7 +44,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.BlobStorage
         {
             var request = new RestRequest(this.ServiceUrl + "providers/", Method.GET);
 
-            return ExecuteRequestFor<CollectionContext<DataProviderSettingsViewModel>>(request);
+            return ExecuteRequest<CollectionContext<DataProviderSettingsViewModel>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "setdefault/")]
@@ -54,7 +54,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.BlobStorage
 
             request.AddParameter("application/json", newDefaultProvider, ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
     }
 }

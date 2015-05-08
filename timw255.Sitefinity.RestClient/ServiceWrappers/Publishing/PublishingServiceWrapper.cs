@@ -27,7 +27,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Publishing
 
             request.AddParameter("application/json", SerializeObject(Ids), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/batch/setactive/?providerName={providerName}&setActive={setActive}")]
@@ -40,7 +40,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Publishing
 
             request.AddParameter("application/json", SerializeObject(ids), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/{pointId}/?providerName={providerName}&createNew={createNew}&itemTemplate={itemTemplate}")]
@@ -53,7 +53,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Publishing
             request.AddUrlSegment("createNew", createNew.ToString());
             request.AddUrlSegment("itemTemplate", itemTemplate);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/indboundpipes/?providerName={providerName}&pipeTypeName={pipeTypeName}&sort={sort}&filter={filter}&skip={skip}&take={take}")]
@@ -68,7 +68,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Publishing
             request.AddUrlSegment("skip", skip.ToString());
             request.AddUrlSegment("take", take.ToString());
 
-            return ExecuteRequestFor<CollectionContext<PublishingPipeViewModel>>(request);
+            return ExecuteRequest<CollectionContext<PublishingPipeViewModel>>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/pipes/?providerName={providerName}&pipeTypeName={pipeTypeName}&sort={sort}&filter={filter}&skip={skip}&take={take}")]
@@ -83,7 +83,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Publishing
             request.AddUrlSegment("skip", skip.ToString());
             request.AddUrlSegment("take", take.ToString());
 
-            return ExecuteRequestFor<CollectionContext<PublishingPipeViewModel>>(request);
+            return ExecuteRequest<CollectionContext<PublishingPipeViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "/{pointId}/?providerName={providerName}&createNew={createNew}&itemTemplate={itemTemplate}")]
@@ -96,7 +96,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Publishing
             request.AddUrlSegment("createNew", createNew.ToString());
             request.AddUrlSegment("itemTemplate", itemTemplate);
             
-            return ExecuteRequestFor<DataItemContext<PublishingPointDetailViewModel>>(request);
+            return ExecuteRequest<DataItemContext<PublishingPointDetailViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "/?providerName={providerName}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -110,7 +110,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Publishing
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<PublishingPointViewModel>>(request);
+            return ExecuteRequest<CollectionContext<PublishingPointViewModel>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/reindex/{pointId}/?providerName={providerName}")]
@@ -121,7 +121,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Publishing
             request.AddUrlSegment("pointId", pointId.ToString());
             request.AddUrlSegment("providerName", providerName);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/runpipes/{pointId}/?providerName={providerName}")]
@@ -132,7 +132,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Publishing
             request.AddUrlSegment("pointId", pointId.ToString());
             request.AddUrlSegment("providerName", providerName);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/{pointId}/?providerName={providerName}&createNew={createNew}&itemTemplate={itemTemplate}")]
@@ -147,7 +147,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Publishing
 
             request.AddParameter("application/json", SerializeObject(point), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<DataItemContext<PublishingPointDetailViewModel>>(request);
+            return ExecuteRequest<DataItemContext<PublishingPointDetailViewModel>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/setactive/{pointId}/?providerName={providerName}&setActive={setActive}")]
@@ -159,7 +159,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Publishing
             request.AddUrlSegment("providerName", providerName);
             request.AddUrlSegment("setActive", setActive.ToString());
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
     }
 }

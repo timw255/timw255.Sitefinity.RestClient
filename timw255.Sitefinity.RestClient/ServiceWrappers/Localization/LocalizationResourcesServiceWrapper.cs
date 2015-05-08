@@ -27,7 +27,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Localization
             request.AddUrlSegment("key", key);
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "{cultureName}/{classId}/{key}/?provider={provider}")]
@@ -40,7 +40,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Localization
             request.AddUrlSegment("key", key);
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<ResourceEntry>(request);
+            return ExecuteRequest<ResourceEntry>(request);
         }
 
         //[WebGet(UriTemplate = "{cultureName=null}/{classId=null}/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -56,7 +56,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Localization
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<ResourceEntry>>(request);
+            return ExecuteRequest<CollectionContext<ResourceEntry>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "{cultureName}/{classId}/{key}/?provider={provider}")]
@@ -71,7 +71,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Localization
 
             request.AddParameter("application/json", SerializeObject(propertyBag), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ResourceEntry>(request);
+            return ExecuteRequest<ResourceEntry>(request);
         }
     }
 }

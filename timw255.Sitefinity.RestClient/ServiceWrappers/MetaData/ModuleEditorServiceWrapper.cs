@@ -42,7 +42,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.MetaData
             request.AddUrlSegment("filter", filter);
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<CollectionContext<FieldViewModel>>(request);
+            return ExecuteRequest<CollectionContext<FieldViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "default/?contentType={contentType}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -56,7 +56,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.MetaData
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<FieldViewModel>>(request);
+            return ExecuteRequest<CollectionContext<FieldViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "views/?itemType={itemType}")]
@@ -66,7 +66,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.MetaData
 
             request.AddUrlSegment("itemType", itemType);
 
-            return ExecuteRequestFor<CollectionContext<WcfDetailFormViewData>>(request);
+            return ExecuteRequest<CollectionContext<WcfDetailFormViewData>>(request);
         }
     }
 }

@@ -29,7 +29,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Taxonomies
 
             request.AddParameter("application/json", SerializeObject(taxonIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "{taxonomyId}/{taxonId}/?provider={provider}&itemType={itemType}&lang={lang}")]
@@ -43,7 +43,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Taxonomies
             request.AddUrlSegment("itemType", itemType);
             request.AddUrlSegment("lang", lang);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/{taxonomyId}/ensure/?provider={provider}&itemType={itemType}")]
@@ -57,7 +57,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Taxonomies
 
             request.AddParameter("application/json", SerializeObject(taxonTitles), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<IEnumerable<WcfFlatTaxon>>(request);
+            return ExecuteRequest<IEnumerable<WcfFlatTaxon>>(request);
         }
 
         //[WebGet(UriTemplate = "/{taxonomyId}/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}&itemType={itemType}&mode={mode}")]
@@ -74,7 +74,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Taxonomies
             request.AddUrlSegment("itemType", itemType);
             request.AddUrlSegment("mode", mode);
 
-            return ExecuteRequestFor<CollectionContext<WcfFlatTaxon>>(request);
+            return ExecuteRequest<CollectionContext<WcfFlatTaxon>>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "{taxonomyId}/")]
@@ -86,7 +86,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Taxonomies
 
             request.AddParameter("application/json", SerializeObject(filter), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<CollectionContext<WcfFlatTaxon>>(request);
+            return ExecuteRequest<CollectionContext<WcfFlatTaxon>>(request);
         }
 
         //[WebGet(UriTemplate = "/{taxonomyId}/{taxonId}/?provider={provider}&itemType={itemType}")]
@@ -99,7 +99,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Taxonomies
             request.AddUrlSegment("provider", provider);
             request.AddUrlSegment("itemType", itemType);
 
-            return ExecuteRequestFor<WcfFlatTaxon>(request);
+            return ExecuteRequest<WcfFlatTaxon>(request);
         }
 
         //[WebInvoke(Method="PUT", UriTemplate="/{taxonomyId}/{taxonId}/?provider={provider}&itemType={itemType}&skipSiteContext={skipSiteContext}", ResponseFormat=WebMessageFormat.Json)]
@@ -115,7 +115,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Taxonomies
 
             request.AddParameter("application/json", SerializeObject(wcfTaxon), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<WcfFlatTaxon>(request);
+            return ExecuteRequest<WcfFlatTaxon>(request);
         }
     }
 }

@@ -27,7 +27,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Configuration
             request.AddUrlSegment("policyName", policyName);
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method="DELETE", UriTemplate="{policyHandlerName}/{policyName}/?provider={provider}", ResponseFormat=WebMessageFormat.Json)]
@@ -39,7 +39,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Configuration
             request.AddUrlSegment("policyName", policyName);
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate="{policyHandlerName=null}/?provider={provider}&sort={sort}&skip={skip}&take={take}&filter={filter}", ResponseFormat=WebMessageFormat.Json)]
@@ -54,7 +54,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Configuration
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<PolicyItem>>(request);
+            return ExecuteRequest<CollectionContext<PolicyItem>>(request);
         }
     }
 }

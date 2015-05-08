@@ -29,7 +29,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Reports
             request.AddUrlSegment("filter", filter);
             request.AddUrlSegment("specificProductType", specificProductType);
 
-            return ExecuteRequestFor<CollectionContext<InventoryReportViewModel>>(request);
+            return ExecuteRequest<CollectionContext<InventoryReportViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "topsellingreport/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}&fromDate={fromDate}&toDate={toDate}")]
@@ -45,7 +45,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Reports
             request.AddUrlSegment("fromDate", fromDate.ToString());
             request.AddUrlSegment("toDate", toDate.ToString());
 
-            return ExecuteRequestFor<CollectionContext<TopSellingReportViewModel>>(request);
+            return ExecuteRequest<CollectionContext<TopSellingReportViewModel>>(request);
         }
     }
 }

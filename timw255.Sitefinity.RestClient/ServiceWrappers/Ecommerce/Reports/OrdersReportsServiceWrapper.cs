@@ -26,7 +26,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Reports
             request.AddUrlSegment("fromDate", fromDate.ToString());
             request.AddUrlSegment("toDate", toDate.ToString());
 
-            return ExecuteRequestFor<ItemContext<OrderSummaryReportViewModel>>(request);
+            return ExecuteRequest<ItemContext<OrderSummaryReportViewModel>>(request);
         }
     }
 }

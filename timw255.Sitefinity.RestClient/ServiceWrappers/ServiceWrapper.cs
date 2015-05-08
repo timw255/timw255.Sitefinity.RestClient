@@ -9,7 +9,6 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using timw255.Sitefinity.RestClient.Model;
-using timw255.Sitefinity.RestClient.SitefinityClient.Exceptions;
 
 namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers
 {
@@ -46,34 +45,23 @@ namespace timw255.Sitefinity.RestClient.SitefinityClient.ServiceWrappers
         public void ExecuteRequest(IRestRequest r)
         {
             IRestResponse response = _sf.ExecuteRequest(r);
-
-            if (response.StatusCode != HttpStatusCode.OK)
-            {
-                throw new InvalidRequestException(response.StatusDescription);
-            }
-
             return;
         }
 
-        public T ExecuteRequestFor<T>(IRestRequest r)
+        public T ExecuteRequest<T>(IRestRequest r)
         {
             IRestResponse response = _sf.ExecuteRequest(r);
 
-            if (response.StatusCode == HttpStatusCode.OK)
-            {
-                T result = DeserializeResponseAs<T>(response.Content);
-                return result;
-            }
-            else
-            {
-                throw new InvalidRequestException(response.StatusDescription);
-            }
+            T result = DeserializeResponseAs<T>(response.Content);
+            return result;
         }
 
         public static T DeserializeResponseAs<T>(string j)
         {
             var jsonSettings = new JsonSerializerSettings();
-            jsonSettings.MissingMemberHandling = MissingMemberHandling.Error;
+
+            // uncomment if you want a heads up when there are members missing from the model classes.
+            //jsonSettings.MissingMemberHandling = MissingMemberHandling.Error;
             
             T result = JsonConvert.DeserializeObject<T>(j, jsonSettings);
             return result;

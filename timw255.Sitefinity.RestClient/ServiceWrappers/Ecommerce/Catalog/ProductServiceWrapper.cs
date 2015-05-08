@@ -27,7 +27,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
 
             request.AddParameter("application/json", SerializeObject(productIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "batch/publish/?provider={providerName}&workflowOperation={workflowOperation}")]
@@ -40,7 +40,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
 
             request.AddParameter("application/json", SerializeObject(ids), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "batch/unpublish/?provider={providerName}&workflowOperation={workflowOperation}")]
@@ -53,7 +53,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
 
             request.AddParameter("application/json", SerializeObject(ids), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/{productId}/?provider={provider}&language={deletedLanguage}")]
@@ -65,7 +65,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
             request.AddUrlSegment("provider", provider);
             request.AddUrlSegment("deletedLanguage", deletedLanguage);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/temp/{productId}/?provider={providerName}&force={force}&workflowOperation={workflowOperation}")]
@@ -78,7 +78,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
             request.AddUrlSegment("force", force.ToString());
             request.AddUrlSegment("workflowOperation", workflowOperation);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "/{productId}/?providerName={providerName}&checkOut={checkOut}")]
@@ -90,7 +90,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
             request.AddUrlSegment("providerName", providerName);
             request.AddUrlSegment("checkOut", checkOut.ToString());
 
-            return ExecuteRequestFor<ContentItemContext<Product>>(request);
+            return ExecuteRequest<ContentItemContext<Product>>(request);
         }
 
         //[WebGet(UriTemplate = "/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}&specificProductType={specificProductType}&otherFilters={otherFilters}")]
@@ -106,7 +106,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
             request.AddUrlSegment("specificProductType", specificProductType);
             request.AddUrlSegment("otherFilters", otherFilters);
 
-            return ExecuteRequestFor<CollectionContext<ProductViewModel>>(request);
+            return ExecuteRequest<CollectionContext<ProductViewModel>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/{productId}/?provider={provider}&itemType={itemType}&workflowOperation={workflowOperation}")]
@@ -121,7 +121,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
 
             request.AddParameter("application/json", SerializeObject(serializedProduct), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ContentItemContext<Product>>(request);
+            return ExecuteRequest<ContentItemContext<Product>>(request);
         }
     }
 }

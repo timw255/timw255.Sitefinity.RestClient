@@ -25,7 +25,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
 
             request.AddParameter("application/json", SerializeObject(credentials), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<AuthenticationResult>(request);
+            return ExecuteRequest<AuthenticationResult>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/CodeDeploy/CheckSetup")]
@@ -33,7 +33,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
         {
             var request = new RestRequest(this.ServiceUrl + "/CodeDeploy/CheckSetup", Method.GET);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/CodeSync/CheckSetup")]
@@ -41,7 +41,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
         {
             var request = new RestRequest(this.ServiceUrl + "/CodeSync/CheckSetup", Method.GET);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/CodeSync/CheckLicense")]
@@ -49,7 +49,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
         {
             var request = new RestRequest(this.ServiceUrl + "/CodeSync/CheckLicense", Method.GET);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/Theme/{type}/{themeName}/{createBackup}")]
@@ -61,7 +61,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
             request.AddUrlSegment("themeName", themeName);
             request.AddUrlSegment("createBackup", createBackup);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/WebsiteTemplate/{templateName}/{createBackup}")]
@@ -72,7 +72,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
             request.AddUrlSegment("templateName", templateName);
             request.AddUrlSegment("createBackup", createBackup);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/WidgetTemplates/{id}?providerName={providerName}")]
@@ -83,7 +83,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
             request.AddUrlSegment("id", id.ToString());
             request.AddUrlSegment("providerName", providerName);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/Pages/GetBackendMenuPageSections")]
@@ -91,7 +91,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
         {
             var request = new RestRequest(this.ServiceUrl + "/Pages/GetBackendMenuPageSections", Method.GET);
 
-            return ExecuteRequestFor<ThunderPageSiteNode>(request);
+            return ExecuteRequest<ThunderPageSiteNode>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/CssClasses/{themeName}?isBackend={isBackend}")]
@@ -102,7 +102,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
             request.AddUrlSegment("themeName", themeName);
             request.AddUrlSegment("isBackend", isBackend.ToString());
 
-            return ExecuteRequestFor<IEnumerable<string>>(request);
+            return ExecuteRequest<IEnumerable<string>>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/DynamicModules")]
@@ -110,7 +110,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
         {
             var request = new RestRequest(this.ServiceUrl + "/DynamicModules", Method.GET);
 
-            return ExecuteRequestFor<IEnumerable<ThunderDynamicModule>>(request);
+            return ExecuteRequest<IEnumerable<ThunderDynamicModule>>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/MasterPages/GetData")]
@@ -120,7 +120,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
 
             request.AddParameter("application/json", SerializeObject(masterPage), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<MasterPageFile>(request);
+            return ExecuteRequest<MasterPageFile>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/CodeSync/ServerSyncShot")]
@@ -128,7 +128,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
         {
             var request = new RestRequest(this.ServiceUrl + "/CodeSync/ServerSyncShot", Method.GET);
 
-            return ExecuteRequestFor<SyncShot>(request);
+            return ExecuteRequest<SyncShot>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/CodeSync/ServerSyncShotWithSyncItemById/{Id}")]
@@ -138,7 +138,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
 
             request.AddUrlSegment("Id", id.ToString());
 
-            return ExecuteRequestFor<SyncShot>(request);
+            return ExecuteRequest<SyncShot>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/CodeSync/GetData")]
@@ -148,7 +148,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
 
             request.AddParameter("application/json", SerializeObject(dataInfo), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<Stream>(request);
+            return ExecuteRequest<Stream>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/SystemInfo")]
@@ -156,7 +156,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
         {
             var request = new RestRequest(this.ServiceUrl + "/SystemInfo", Method.GET);
 
-            return ExecuteRequestFor<SitefinitySystemInfo>(request);
+            return ExecuteRequest<SitefinitySystemInfo>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/Themes/{type}/{themeName}?includeData={includeData}")]
@@ -168,7 +168,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
             request.AddUrlSegment("themeName", themeName);
             request.AddUrlSegment("includeData", includeData.ToString());
 
-            return ExecuteRequestFor<Theme>(request);
+            return ExecuteRequest<Theme>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/Themes")]
@@ -176,7 +176,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
         {
             var request = new RestRequest(this.ServiceUrl + "/Themes", Method.GET);
 
-            return ExecuteRequestFor<ICollection<Theme>>(request);
+            return ExecuteRequest<ICollection<Theme>>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/WebsiteTemplate/{templateName}?includeData={includeData}")]
@@ -187,7 +187,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
             request.AddUrlSegment("templateName", templateName);
             request.AddUrlSegment("includeData", includeData.ToString());
 
-            return ExecuteRequestFor<WebsiteTemplate>(request);
+            return ExecuteRequest<WebsiteTemplate>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/WebsiteTemplates")]
@@ -195,7 +195,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
         {
             var request = new RestRequest(this.ServiceUrl + "/WebsiteTemplates", Method.GET);
 
-            return ExecuteRequestFor<IEnumerable<WebsiteTemplate>>(request);
+            return ExecuteRequest<IEnumerable<WebsiteTemplate>>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/WidgetProperties/{controlType}")]
@@ -205,7 +205,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
 
             request.AddUrlSegment("controlType", controlType);
 
-            return ExecuteRequestFor<ICollection<DataItemProperty>>(request);
+            return ExecuteRequest<ICollection<DataItemProperty>>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/CodeDeploy/WidgetSections/{widgetType}")]
@@ -215,7 +215,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
 
             request.AddUrlSegment("widgetType", widgetType);
 
-            return ExecuteRequestFor<ICollection<string>>(request);
+            return ExecuteRequest<ICollection<string>>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/WidgetTemplates/{id}?providerName={providerName}")]
@@ -226,7 +226,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
             request.AddUrlSegment("id", id.ToString());
             request.AddUrlSegment("providerName", providerName);
 
-            return ExecuteRequestFor<WidgetTemplate>(request);
+            return ExecuteRequest<WidgetTemplate>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/WidgetTemplates?providerName={providerName}")]
@@ -236,7 +236,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
 
             request.AddUrlSegment("providerName", providerName);
 
-            return ExecuteRequestFor<ICollection<WidgetTemplate>>(request);
+            return ExecuteRequest<ICollection<WidgetTemplate>>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/IsCurrentUserAuthenticated")]
@@ -244,7 +244,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
         {
             var request = new RestRequest(this.ServiceUrl + "/IsCurrentUserAuthenticated", Method.GET);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/LogoutWithCredentials")]
@@ -254,7 +254,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
 
             request.AddParameter("application/json", SerializeObject(credentials), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/MasterPages/Save")]
@@ -264,7 +264,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
 
             request.AddParameter("application/json", SerializeObject(masterPage), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/Theme/Save/{type}/{themeName}/{templateName}/{createBackup}")]
@@ -279,7 +279,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
 
             request.AddParameter("application/json", SerializeObject(themeData), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/WebsiteTemplate/Save/{templateName}/{createBackup}")]
@@ -292,7 +292,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
 
             request.AddParameter("application/json", SerializeObject(templateDataStream), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "/WidgetTemplates/Save?providerName={providerName}")]
@@ -304,7 +304,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
 
             request.AddParameter("application/json", SerializeObject(widgetTemplate), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/CodeDeploy/SendData/{infoBytesCountString}")]
@@ -316,7 +316,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
 
             request.AddParameter("application/json", SerializeObject(dataStream), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/CodeSync/SendData/{infoBytesCountString}")]
@@ -328,7 +328,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
 
             request.AddParameter("application/json", SerializeObject(dataStream), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<List<FailedToSyncItem>>(request);
+            return ExecuteRequest<List<FailedToSyncItem>>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/TestConnection")]
@@ -336,7 +336,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Thunder
         {
             var request = new RestRequest(this.ServiceUrl + "/TestConnection", Method.GET);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
     }
 }

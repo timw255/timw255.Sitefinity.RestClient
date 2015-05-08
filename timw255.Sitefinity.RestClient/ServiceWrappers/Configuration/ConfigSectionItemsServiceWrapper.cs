@@ -29,7 +29,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Configuration
             request.AddUrlSegment("provider", provider);
             request.AddUrlSegment("mode", mode);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "texteditor/batch/")]
@@ -47,7 +47,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Configuration
         {
             var request = new RestRequest(this.ServiceUrl + "authentication/", Method.GET);
 
-            return ExecuteRequestFor<UserAuthenticationSettingsContract>(request);
+            return ExecuteRequest<UserAuthenticationSettingsContract>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "comments/")]
@@ -55,7 +55,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Configuration
         {
             var request = new RestRequest(this.ServiceUrl + "comments/", Method.GET);
 
-            return ExecuteRequestFor<CommentsSettingsContract>(request);
+            return ExecuteRequest<CommentsSettingsContract>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "?nodeName={nodeName}&policyHandlerName={policyHandlerName}&policyName={policyName}&provider={provider}&mode={mode}&type={typeName}")]
@@ -70,7 +70,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Configuration
             request.AddUrlSegment("mode", mode);
             request.AddUrlSegment("typeName", typeName);
 
-            return ExecuteRequestFor<CollectionContext<UISectionItem>>(request);
+            return ExecuteRequest<CollectionContext<UISectionItem>>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "cultures/?filter={filter}")]
@@ -80,7 +80,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Configuration
 
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<CultureViewModel>>(request);
+            return ExecuteRequest<CollectionContext<CultureViewModel>>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "general/?siteId={siteId}")]
@@ -90,7 +90,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Configuration
 
             request.AddUrlSegment("siteId", siteId.ToString());
 
-            return ExecuteRequestFor<GeneralSettingsModel>(request);
+            return ExecuteRequest<GeneralSettingsModel>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "languages/?filter={filter}")]
@@ -100,7 +100,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Configuration
 
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<CultureViewModel>>(request);
+            return ExecuteRequest<CollectionContext<CultureViewModel>>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "localization/?includeSitesNames={includeSitesNames}")]
@@ -110,7 +110,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Configuration
 
             request.AddUrlSegment("includeSitesNames", includeSitesNames.ToString());
 
-            return ExecuteRequestFor<LocalizationSettingsModel>(request);
+            return ExecuteRequest<LocalizationSettingsModel>(request);
         }
 
         //[WebGet(UriTemplate = "/newsletters/")]
@@ -118,7 +118,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Configuration
         {
             var request = new RestRequest(this.ServiceUrl + "/newsletters/", Method.GET);
 
-            return ExecuteRequestFor<NewslettersSettingsContract>(request);
+            return ExecuteRequest<NewslettersSettingsContract>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "socialshare/")]
@@ -126,7 +126,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Configuration
         {
             var request = new RestRequest(this.ServiceUrl + "socialshare/", Method.GET);
 
-            return ExecuteRequestFor<SocialShareSettingsContract>(request);
+            return ExecuteRequest<SocialShareSettingsContract>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "texteditortoolset/?toolSetName={toolSetName}")]
@@ -136,7 +136,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Configuration
 
             request.AddUrlSegment("toolSetName", toolSetName);
 
-            return ExecuteRequestFor<CollectionContext<TextEditorToolsetViewModel>>(request);
+            return ExecuteRequest<CollectionContext<TextEditorToolsetViewModel>>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "texteditor/?getDefault={getDefault}")]
@@ -146,7 +146,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Configuration
 
             request.AddUrlSegment("getDefault", getDefault.ToString());
 
-            return ExecuteRequestFor<CollectionContext<TextEditorToolsetViewModel>>(request);
+            return ExecuteRequest<CollectionContext<TextEditorToolsetViewModel>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "authentication/{key}/")]
@@ -175,7 +175,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Configuration
 
             request.AddParameter("application/json", SerializeObject(propertyBag), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "comments/{key}/")]
@@ -247,7 +247,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Configuration
 
             request.AddParameter("application/json", SerializeObject(toolSet), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<string>(request);
+            return ExecuteRequest<string>(request);
         }
 
         //[WebInvoke(Method = "POST", UriTemplate = "texteditorupload/")]
@@ -255,7 +255,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Configuration
         {
             var request = new RestRequest(this.ServiceUrl + "texteditorupload/", Method.POST);
 
-            return ExecuteRequestFor<string>(request);
+            return ExecuteRequest<string>(request);
         }
     }
 }

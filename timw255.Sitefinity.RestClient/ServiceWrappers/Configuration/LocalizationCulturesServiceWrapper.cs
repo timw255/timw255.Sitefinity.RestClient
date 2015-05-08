@@ -29,7 +29,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Configuration
             request.AddUrlSegment("filter", filter);
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<CollectionContext<CultureElement>>(request);
+            return ExecuteRequest<CollectionContext<CultureElement>>(request);
         }
     }
 }

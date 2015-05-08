@@ -42,7 +42,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Workflow
             request.AddUrlSegment("filter", filter);
             request.AddUrlSegment("workflowFilter", workflowFilter);
 
-            return ExecuteRequestFor<CollectionContext<WorkflowDefinitionViewModel>>(request);
+            return ExecuteRequest<CollectionContext<WorkflowDefinitionViewModel>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/{workflowDefinitionId}/?provider={provider}")]
@@ -55,7 +55,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Workflow
 
             request.AddParameter("application/json", SerializeObject(workflowDefinitionViewModel), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<WorkflowDefinitionViewModel>(request);
+            return ExecuteRequest<WorkflowDefinitionViewModel>(request);
         }
     }
 }

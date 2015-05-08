@@ -27,7 +27,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
 
             request.AddParameter("application/json", SerializeObject(campaignIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/abtests/{issueAId}/?provider={provider}&isFromScratch={isFromScratch}")]
@@ -41,7 +41,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
 
             request.AddParameter("application/json", SerializeObject(issueB), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ABCampaignViewModel>(request);
+            return ExecuteRequest<ABCampaignViewModel>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/decidewinner/{abCampaignId}/{winningCampaignId}/?provider={provider}")]
@@ -53,7 +53,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("winningCampaignId", winningCampaignId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/{campaignId}/?provider={provider}")]
@@ -64,7 +64,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("campaignId", campaignId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/endtesting/{abCampaignId}/?provider={provider}")]
@@ -75,7 +75,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("abCampaignId", abCampaignId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<string>(request);
+            return ExecuteRequest<string>(request);
         }
 
         //[WebGet(UriTemplate = "/abtests/{rootCampaignId}/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -90,7 +90,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<ABCampaignGridViewModel>>(request);
+            return ExecuteRequest<CollectionContext<ABCampaignGridViewModel>>(request);
         }
 
         //[WebGet(UriTemplate = "/{campaignId}/?provider={provider}")]
@@ -101,7 +101,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("campaignId", campaignId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<ABCampaignViewModel>(request);
+            return ExecuteRequest<ABCampaignViewModel>(request);
         }
 
         //[WebGet(UriTemplate = "/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -115,7 +115,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<ABCampaignViewModel>>(request);
+            return ExecuteRequest<CollectionContext<ABCampaignViewModel>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/{campaignId}/?provider={provider}")]
@@ -128,7 +128,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
 
             request.AddParameter("application/json", SerializeObject(campaign), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ABCampaignViewModel>(request);
+            return ExecuteRequest<ABCampaignViewModel>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/setconclusion/{abTestId}/?provider={provider}")]
@@ -141,7 +141,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
 
             request.AddParameter("application/json", SerializeObject(value), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/settestingnote/{abTestId}/?provider={provider}")]
@@ -154,7 +154,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
 
             request.AddParameter("application/json", SerializeObject(value), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "GET", UriTemplate = "/starttesting/{abCampaignId}/?provider={provider}")]
@@ -165,7 +165,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Newsletters
             request.AddUrlSegment("abCampaignId", abCampaignId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
     }
 }

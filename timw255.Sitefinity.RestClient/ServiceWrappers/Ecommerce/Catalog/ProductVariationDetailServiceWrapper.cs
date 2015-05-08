@@ -26,7 +26,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
 
             request.AddParameter("application/json", SerializeObject(attributeIds), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebInvoke(Method = "DELETE", UriTemplate = "/{attributeId}/?provider={provider}")]
@@ -37,7 +37,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
             request.AddUrlSegment("attributeId", attributeId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<bool>(request);
+            return ExecuteRequest<bool>(request);
         }
 
         //[WebGet(UriTemplate = "/{attributeId}/?provider={provider}")]
@@ -48,7 +48,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
             request.AddUrlSegment("attributeId", attributeId.ToString());
             request.AddUrlSegment("provider", provider);
 
-            return ExecuteRequestFor<ItemContext<ProductVariationDetail>>(request);
+            return ExecuteRequest<ItemContext<ProductVariationDetail>>(request);
         }
 
         //[WebGet(UriTemplate = "/?provider={provider}&sortExpression={sortExpression}&skip={skip}&take={take}&filter={filter}")]
@@ -62,7 +62,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
             request.AddUrlSegment("take", take.ToString());
             request.AddUrlSegment("filter", filter);
 
-            return ExecuteRequestFor<CollectionContext<ProductVariationDetail>>(request);
+            return ExecuteRequest<CollectionContext<ProductVariationDetail>>(request);
         }
 
         //[WebInvoke(Method = "PUT", UriTemplate = "/{attributeId}/?provider={provider}")]
@@ -75,7 +75,7 @@ namespace timw255.Sitefinity.RestClient.ServiceWrappers.Ecommerce.Catalog
 
             request.AddParameter("application/json", SerializeObject(attribute), ParameterType.RequestBody);
 
-            return ExecuteRequestFor<ItemContext<ProductVariationDetail>>(request);
+            return ExecuteRequest<ItemContext<ProductVariationDetail>>(request);
         }
     }
 }
