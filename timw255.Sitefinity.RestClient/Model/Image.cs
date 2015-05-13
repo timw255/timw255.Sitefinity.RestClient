@@ -10,7 +10,7 @@ namespace timw255.Sitefinity.RestClient.Model
     public class Image : MediaContent
     {
         public Album Album { get; set; }
-        public LstringSingleViewModel AlternativeText { get; set; }
+        public Lstring AlternativeText { get; set; }
         public int Height { get; set; }
         public int Width { get; set; }
 

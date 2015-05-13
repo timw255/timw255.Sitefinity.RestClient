@@ -10,7 +10,7 @@ namespace timw255.Sitefinity.RestClient.Model
     public class Document : MediaContent
     {
         public DocumentLibrary Library { get; set; }
-        public LstringSingleViewModel Parts { get; set; }
+        public Lstring Parts { get; set; }
 
         public Document() { }
     }

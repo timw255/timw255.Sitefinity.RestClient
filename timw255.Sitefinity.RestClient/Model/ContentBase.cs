@@ -32,7 +32,7 @@ namespace timw255.Sitefinity.RestClient.Model
         public ContentLifecycleStatus Status { get; set; }
         public virtual Lstring Title { get; set; }
         public ContentUIStatus UIStatus { get; set; }
-        public virtual LstringSingleViewModel UrlName { get; set; }
+        public virtual Lstring UrlName { get; set; }
         public int Version { get; set; }
         public int ViewsCount { get; set; }
         public bool Visible { get; set; }

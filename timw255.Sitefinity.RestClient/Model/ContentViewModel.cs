@@ -10,7 +10,7 @@ namespace timw255.Sitefinity.RestClient.Model
     public class ContentViewModel : ContentViewModelBase
     {        
         [Obsolete("To get content, use ContentItemService GetContent method.")]
-        public LstringSingleViewModel Content { get; set; }
+        public Lstring Content { get; set; }
         public DateTime? LastModified { get; set; }
         public string PageProviderName { get; set; }
         public int PagesCount { get; set; }

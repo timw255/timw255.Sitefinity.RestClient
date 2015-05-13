@@ -10,7 +10,7 @@ namespace timw255.Sitefinity.RestClient.Model
 {
     public class DynamicContent
     {
-        public LstringSingleViewModel ApprovalWorkflowState { get; set; }
+        public Lstring ApprovalWorkflowState { get; set; }
         public string Author { get; set; }
         public string[] AvailableLanguages { get; set; }
         public DateTime DateCreated { get; set; }
@@ -19,7 +19,7 @@ namespace timw255.Sitefinity.RestClient.Model
         public Guid Id { get; set; }
         public bool IsDeletable { get; set; }
         public bool IsEditable { get; set; }
-        public LstringSingleViewModel ItemDefaultUrl { get; set; }
+        public Lstring ItemDefaultUrl { get; set; }
         public DateTime LastModified { get; set; }
         public Guid LastModifiedBy { get; set; }
         public LifecycleInfo Lifecycle { get; set; }
@@ -33,7 +33,7 @@ namespace timw255.Sitefinity.RestClient.Model
         public string SystemParentType { get; set; }
         [Obsolete("Use ItemDefaultUrl instead")]
         public string SystemUrl { get; set; }
-        public LstringSingleViewModel UrlName { get; set; }
+        public Lstring UrlName { get; set; }
 
         public DynamicContent() { }
     }

@@ -9,8 +9,8 @@ namespace timw255.Sitefinity.RestClient.Model
 {
     public class ListItem : ContentBase
     {
-        public LstringSingleViewModel ApprovalWorkflowState { get; set; }
-        public LstringSingleViewModel Content { get; set; }
+        public Lstring ApprovalWorkflowState { get; set; }
+        public Lstring Content { get; set; }
         public float Ordinal { get; set; }
 
         public ListItem() { }

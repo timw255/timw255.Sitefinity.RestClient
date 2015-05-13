@@ -9,10 +9,10 @@ namespace timw255.Sitefinity.RestClient.Model
 {
     public class BlogPost : ContentBase
     {
-        public LstringSingleViewModel ApprovalWorkflowState { get; set; }
-        public LstringSingleViewModel Content { get; set; }
-        public LstringSingleViewModel ItemDefaultUrl { get; set; }
-        public LstringSingleViewModel Summary { get; set; }
+        public Lstring ApprovalWorkflowState { get; set; }
+        public Lstring Content { get; set; }
+        public Lstring ItemDefaultUrl { get; set; }
+        public Lstring Summary { get; set; }
 
         public BlogPost() { }
     }

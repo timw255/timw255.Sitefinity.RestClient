@@ -9,13 +9,13 @@ namespace timw255.Sitefinity.RestClient.Model
 {
     public class NewsItem : ContentBase
     {
-        public LstringSingleViewModel ApprovalWorkflowState { get; set; }
-        public LstringSingleViewModel Author { get; set; }
-        public LstringSingleViewModel Content { get; set; }
-        public LstringSingleViewModel ItemDefaultUrl { get; set; }
+        public Lstring ApprovalWorkflowState { get; set; }
+        public Lstring Author { get; set; }
+        public Lstring Content { get; set; }
+        public Lstring ItemDefaultUrl { get; set; }
         public string SourceName { get; set; }
         public string SourceSite { get; set; }
-        public LstringSingleViewModel Summary { get; set; }
+        public Lstring Summary { get; set; }
 
         public NewsItem() { }
     }

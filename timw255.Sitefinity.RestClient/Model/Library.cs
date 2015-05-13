@@ -16,7 +16,7 @@ namespace timw255.Sitefinity.RestClient.Model
         public string DownloadSecurityProviderName { get; set; }
         public bool EnableClientCache { get; set; }
         public bool EnableOutputCache { get; set; }
-        public LstringSingleViewModel ItemDefaultUrl { get; set; }
+        public Lstring ItemDefaultUrl { get; set; }
         public long MaxItemSize { get; set; }
         public long MaxSize { get; set; }
         public int OutputCacheDuration { get; set; }
@@ -27,7 +27,7 @@ namespace timw255.Sitefinity.RestClient.Model
         public Guid RunningTask { get; set; }
         public IList<string> ThumbnailProfiles { get; set; }
         public override Lstring Title { get; set; }
-        public override LstringSingleViewModel UrlName { get; set; }
+        public override Lstring UrlName { get; set; }
         public bool UseDefaultSettingsForClientCaching { get; set; }
         public bool UseDefaultSettingsForOutputCaching { get; set; }
 

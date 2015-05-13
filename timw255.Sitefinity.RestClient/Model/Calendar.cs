@@ -12,13 +12,13 @@ namespace timw255.Sitefinity.RestClient.Model
     {
         public string[] AvailableLanguages { get; set; }
         public string Color { get; set; }
-        public LstringSingleViewModel Description { get; set; }
+        public Lstring Description { get; set; }
         public DateTime? ExpirationDate { get; set; }
         public Guid Id { get; set; }
         public Guid Owner { get; set; }
         public DateTime PublicationDate { get; set; }
-        public LstringSingleViewModel Title { get; set; }
-        public LstringSingleViewModel UrlName { get; set; }
+        public Lstring Title { get; set; }
+        public Lstring UrlName { get; set; }
 
         public Calendar() { }
     }

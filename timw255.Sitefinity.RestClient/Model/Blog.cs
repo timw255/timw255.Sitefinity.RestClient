@@ -10,7 +10,7 @@ namespace timw255.Sitefinity.RestClient.Model
     public class Blog : ContentBase
     {
         public override DateTime? ExpirationDate { get; set; }
-        public LstringSingleViewModel ItemDefaultUrl { get; set; }
+        public Lstring ItemDefaultUrl { get; set; }
         public Guid LandingPageId { get; set; }
 
         public Blog() { }

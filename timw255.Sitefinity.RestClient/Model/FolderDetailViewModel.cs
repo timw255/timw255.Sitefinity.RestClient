@@ -9,10 +9,10 @@ namespace timw255.Sitefinity.RestClient.Model
 {
     public class FolderDetailViewModel
     {
-        public LstringSingleViewModel Description { get; set; }
+        public Lstring Description { get; set; }
         public Guid Id { get; set; }
         public Guid ParentId { get; set; }
-        public LstringSingleViewModel Title { get; set; }
+        public Lstring Title { get; set; }
 
         public FolderDetailViewModel() { }
     }

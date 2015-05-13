@@ -11,7 +11,7 @@ namespace timw255.Sitefinity.RestClient.Model
     {
         public string Author { get; set; }
         public string CategoryText { get; set; }
-        public LstringSingleViewModel Content { get; set; }
+        public Lstring Content { get; set; }
         public string Name { get; set; }
         public string TagsText { get; set; }
 
